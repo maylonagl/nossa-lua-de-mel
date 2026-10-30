@@ -1,157 +1,796 @@
+
 <!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#f8f4eb">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f8f4eb">
 <title>Nossa Lua de Mel · Buenos Aires</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
 <style>
-:root{--cream:#f8f4eb;--paper:#fffdf8;--wine:#692f42;--wine2:#4c2332;--olive:#68775d;--gold:#b29562;--ink:#312b29;--muted:#817a74;--line:#e7ded2;--shadow:0 14px 36px #3b262016}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font:14px/1.55 'DM Sans',sans-serif}button,input,select{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible{outline:3px solid #c3a977;outline-offset:2px}.serif,h1,h2,h3{font-family:'Playfair Display',Georgia,serif}a{color:inherit}.shell{max-width:1180px;margin:auto;padding:0 22px}.hero{position:relative;min-height:460px;overflow:hidden;background:linear-gradient(125deg,#4b2835ed,#6b3d48e8 60%,#7e5c50ed),url('https://images.unsplash.com/photo-1589909202802-8f4aadce1849?auto=format&fit=crop&w=1600&q=80') center/cover;color:#fff9ee}.hero:before{content:'';position:absolute;inset:16px;border:1px solid #e4c8a56b;pointer-events:none}.hero-content{position:relative;text-align:center;padding:68px 20px 54px;max-width:800px;margin:auto}.eyebrow{font-size:10px;letter-spacing:.28em;text-transform:uppercase;font-weight:700;color:#e7d1b4}.hero h1{font-size:clamp(46px,8vw,91px);line-height:1.03;font-weight:400;letter-spacing:-.035em;margin:24px 0 12px}.hero h1 em{font-weight:400}.hero .sub{font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(17px,3vw,25px);color:#f0dbd3}.ornament{font-size:26px;color:#d6b67c;margin:14px}.hero-date{font-size:12px;letter-spacing:.18em;text-transform:uppercase;margin-top:18px}.hero-actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:30px}.btn{border:1px solid var(--line);background:var(--paper);border-radius:100px;padding:10px 16px;color:var(--wine);font-weight:700;display:inline-flex;align-items:center;justify-content:center;gap:6px;text-decoration:none;transition:.2s}.btn:hover{transform:translateY(-1px)}.btn-primary{background:var(--wine);color:white;border-color:var(--wine)}.hero .btn{border-color:#fff9ee75;color:white;background:#ffffff16}.hero .btn-primary{background:#fff8e8;color:var(--wine)}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:-32px;position:relative}.stat{background:var(--paper);padding:17px 14px;border:1px solid var(--line);box-shadow:var(--shadow);border-radius:12px;text-align:center}.stat strong{display:block;font:500 25px 'Playfair Display',serif;color:var(--wine)}.stat span{font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted)}.section-head{margin:42px 0 18px;display:flex;align-items:end;justify-content:space-between;gap:16px}.section-head h2{font-size:clamp(27px,5vw,39px);font-weight:500;margin:0}.section-head p{margin:4px 0 0;color:var(--muted)}.tools{position:sticky;top:0;z-index:20;background:#f8f4ebf2;backdrop-filter:blur(16px);padding:12px 0 14px;border-bottom:1px solid var(--line)}.tabs{display:flex;overflow:auto;gap:8px;scrollbar-width:none;padding:4px 0}.tabs::-webkit-scrollbar{display:none}.chip{border:1px solid #dcd2c4;border-radius:50px;background:transparent;color:#5b554e;white-space:nowrap;padding:9px 14px;font-size:12px;font-weight:700}.chip.active{background:var(--wine);color:white;border-color:var(--wine)}.filters{display:grid;grid-template-columns:minmax(0,1fr) 150px 150px;gap:9px;margin-top:8px}.field{border:1px solid var(--line);background:var(--paper);border-radius:10px;padding:12px;min-width:0;color:var(--ink);width:100%}.summary{display:flex;justify-content:space-between;gap:12px;align-items:center;color:var(--muted);font-size:12px;margin:18px 0}.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.card{border:1px solid var(--line);border-radius:15px;overflow:hidden;background:var(--paper);box-shadow:0 5px 19px #36251c0a;display:flex;flex-direction:column;min-width:0}.card.food{border-top:3px solid var(--gold)}.card.party{border-top:3px solid var(--wine)}.card-top{padding:18px 18px 10px}.card-kicker{display:flex;gap:6px;align-items:center;justify-content:space-between;margin-bottom:10px}.pill{border-radius:40px;background:#efe8dd;padding:4px 9px;color:#61574b;font-size:10px;letter-spacing:.035em;font-weight:700}.pill.official{background:#e7eee3;color:#476247}.pill.option{background:#f3e9de;color:#8a5e3d}.card h3{font-size:24px;line-height:1.16;font-weight:500;margin:0 0 8px}.address{color:var(--muted);font-size:12px;margin:0 0 10px}.description{margin:0;color:#625b55;flex:1}.card-bottom{margin-top:auto;padding:12px 18px 17px}.meta{display:grid;grid-template-columns:1fr;gap:7px;margin:14px 0}.meta-row{display:flex;gap:9px;align-items:flex-start;font-size:12px}.meta-row .symbol{color:var(--gold);font-size:14px;min-width:17px}.look{background:#f0efe7;border-radius:8px;padding:10px 11px;color:#4c5748}.look b{font-size:10px;letter-spacing:.12em;text-transform:uppercase;display:block;margin-bottom:3px}.look span{font-size:12px}.actions{display:grid;grid-template-columns:1fr 1fr auto;gap:7px;margin-top:12px}.actions .btn{font-size:11px;padding:9px 8px}.iconbtn{min-width:39px}.iconbtn.selected{background:var(--wine);color:white}.day-block{margin-bottom:32px}.day-title{display:flex;gap:13px;align-items:center;margin:26px 0 15px}.day-num{background:var(--wine);color:#fff;border-radius:10px;padding:9px 12px;font-family:'Playfair Display',serif;font-size:23px}.day-title h3{font-size:23px;font-weight:500;margin:0}.day-title small{display:block;color:var(--muted)}.note{background:#f0e9df;border-left:3px solid var(--gold);padding:13px 16px;border-radius:0 10px 10px 0;font-size:12px;color:#63584d;margin:22px 0}.empty{text-align:center;border:1px dashed var(--line);padding:50px 20px;border-radius:12px;color:var(--muted)}.budget{background:var(--wine2);color:#fff7eb;border-radius:17px;padding:25px;display:grid;grid-template-columns:1fr 1fr;gap:20px}.budget h3{font-size:30px;font-weight:400;margin:0 0 6px}.budget .big{font:500 39px 'Playfair Display',serif;color:#f1d3a2}.budget p{color:#eaded7}.budget .row{display:flex;justify-content:space-between;border-bottom:1px solid #ffffff30;padding:8px 0;font-size:12px}.budget small{color:#ddc8c0}.footer{text-align:center;padding:55px 20px 95px;color:var(--muted);font-size:12px}.footer .heart{font-size:28px;color:var(--wine)}.bottom-nav{display:none}.toast{position:fixed;bottom:85px;left:50%;transform:translateX(-50%);background:var(--wine2);color:white;padding:10px 17px;border-radius:50px;box-shadow:var(--shadow);z-index:60;font-size:12px;opacity:0;pointer-events:none;transition:.25s}.toast.show{opacity:1}.counter{font-size:12px;color:var(--muted)}@media(max-width:900px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:640px){.shell{padding:0 15px}.hero{min-height:400px}.hero-content{padding:70px 22px 58px}.hero h1{font-size:53px}.stats{gap:7px}.stat{padding:12px 7px}.stat strong{font-size:21px}.stat span{font-size:9px}.section-head{margin-top:32px}.tools{top:0}.filters{grid-template-columns:1fr 1fr}.filters input{grid-column:1/-1}.cards{grid-template-columns:1fr;gap:12px}.card h3{font-size:24px}.budget{grid-template-columns:1fr}.bottom-nav{position:fixed;bottom:0;left:0;right:0;display:grid;grid-template-columns:repeat(4,1fr);background:#fffdf9f5;backdrop-filter:blur(15px);border-top:1px solid var(--line);z-index:30;padding:8px 4px max(8px,env(safe-area-inset-bottom))}.bottom-nav button{background:none;border:0;color:var(--muted);font-size:10px;display:grid;gap:2px;justify-items:center}.bottom-nav button span{font-size:19px}.footer{padding-bottom:115px}}
-.currency-section{margin-top:36px}.converter{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:0 5px 19px #36251c0a}.convert-grid{display:grid;grid-template-columns:1fr 1fr auto 1fr;gap:12px;align-items:end}.convert-grid label,.rate-grid label{display:grid;gap:6px;color:var(--muted);font-size:12px;font-weight:700}.swap{border:1px solid var(--line);border-radius:10px;background:#f0e9df;color:var(--wine);height:45px;width:43px;font-size:23px}.fx-result{margin-top:18px;border-radius:13px;padding:18px 20px;background:#f3efe7;display:grid;gap:3px}.fx-result span,.fx-result small{color:var(--muted);font-size:12px}.fx-result strong{font:500 clamp(26px,5vw,38px) 'Playfair Display',Georgia,serif;color:var(--wine)}.fx-settings{margin-top:15px}.fx-settings summary,.budget-details summary{cursor:pointer}.fx-settings summary{font-size:12px;color:var(--olive);font-weight:700}.fx-settings p,.fx-settings small{font-size:12px;color:var(--muted)}.rate-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:12px 0}.budget-section{margin:35px 0}.budget-details{border:1px solid var(--line);border-radius:13px;background:var(--paper);overflow:hidden}.budget-details>summary{list-style:none;padding:16px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;color:var(--muted);font-size:13px}.budget-details>summary::-webkit-details-marker{display:none}.budget-details>summary small{font-size:11px;color:var(--muted)}.budget-inner{padding:0 10px 10px}.budget{box-shadow:none}.budget .big{font-size:32px}@media(max-width:640px){.converter{padding:16px}.convert-grid{grid-template-columns:1fr 1fr}.convert-grid label:first-child{grid-column:1/-1}.convert-grid .swap{grid-column:1;grid-row:3}.convert-grid label:last-child{grid-column:2;grid-row:3}.convert-grid label:nth-child(2){grid-column:1/-1}.convert-grid .swap{height:43px;width:100%}.rate-grid{grid-template-columns:1fr}.budget-details>summary{align-items:flex-start;flex-direction:column;gap:2px}}
+:root{
+ --cream:#f8f4eb;--paper:#fffdf8;--wine:#692f42;
+ --wine2:#4c2332;--olive:#68775d;--gold:#b29562;
+ --ink:#312b29;--muted:#817a74;--line:#e7ded2;
+ --shadow:0 14px 36px #3b262016
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font:14px/1.55 'DM Sans',sans-serif}
+button,input,select{font:inherit}
+button{cursor:pointer}
+button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #c3a977;outline-offset:2px}
+a{color:inherit}
+h1,h2,h3,.serif{font-family:'Playfair Display',Georgia,serif}
+.shell{max-width:1180px;margin:auto;padding:0 22px}
+.hero{
+ position:relative;min-height:460px;overflow:hidden;
+ background:linear-gradient(125deg,#4b2835ed,#6b3d48e8 60%,#7e5c50ed),
+ url('https://images.unsplash.com/photo-1589909202802-8f4aadce1849?auto=format&fit=crop&w=1600&q=80') center/cover;
+ color:#fff9ee
+}
+.hero:before{content:'';position:absolute;inset:16px;border:1px solid #e4c8a56b;pointer-events:none}
+.hero-content{position:relative;text-align:center;padding:68px 20px 54px;max-width:800px;margin:auto}
+.eyebrow{font-size:10px;letter-spacing:.28em;text-transform:uppercase;font-weight:700;color:#e7d1b4}
+.hero h1{font-size:clamp(46px,8vw,91px);line-height:1.03;font-weight:400;letter-spacing:-.035em;margin:24px 0 12px}
+.hero h1 em{font-weight:400}
+.hero .sub{font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(17px,3vw,25px);color:#f0dbd3}
+.ornament{font-size:26px;color:#d6b67c;margin:14px}
+.hero-date{font-size:12px;letter-spacing:.18em;text-transform:uppercase;margin-top:18px}
+.hero-actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:30px}
+.btn{
+ border:1px solid var(--line);background:var(--paper);border-radius:100px;
+ padding:10px 16px;color:var(--wine);font-weight:700;
+ display:inline-flex;align-items:center;justify-content:center;
+ gap:6px;text-decoration:none;transition:.2s
+}
+.btn:hover{transform:translateY(-1px)}
+.btn-primary{background:var(--wine);color:white;border-color:var(--wine)}
+.hero .btn{border-color:#fff9ee75;color:white;background:#ffffff16}
+.hero .btn-primary{background:#fff8e8;color:var(--wine)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:-32px;position:relative}
+.stat{background:var(--paper);padding:17px 14px;border:1px solid var(--line);box-shadow:var(--shadow);border-radius:12px;text-align:center}
+.stat strong{display:block;font:500 25px 'Playfair Display',serif;color:var(--wine)}
+.stat span{font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted)}
+.section-head{margin:42px 0 18px;display:flex;align-items:end;justify-content:space-between;gap:16px}
+.section-head h2{font-size:clamp(27px,5vw,39px);font-weight:500;margin:0}
+.section-head p{margin:4px 0 0;color:var(--muted)}
+.tools{position:sticky;top:0;z-index:20;background:#f8f4ebf2;backdrop-filter:blur(16px);padding:12px 0 14px;border-bottom:1px solid var(--line)}
+.tabs{display:flex;overflow:auto;gap:8px;scrollbar-width:none;padding:4px 0}
+.tabs::-webkit-scrollbar{display:none}
+.chip{border:1px solid #dcd2c4;border-radius:50px;background:transparent;color:#5b554e;white-space:nowrap;padding:9px 14px;font-size:12px;font-weight:700}
+.chip.active{background:var(--wine);color:white;border-color:var(--wine)}
+.filters{display:grid;grid-template-columns:minmax(0,1fr) 150px 150px;gap:9px;margin-top:8px}
+.field{border:1px solid var(--line);background:var(--paper);border-radius:10px;padding:12px;min-width:0;color:var(--ink);width:100%}
+.summary{display:flex;justify-content:space-between;gap:12px;align-items:center;color:var(--muted);font-size:12px;margin:18px 0}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.card{border:1px solid var(--line);border-radius:15px;overflow:hidden;background:var(--paper);box-shadow:0 5px 19px #36251c0a;display:flex;flex-direction:column;min-width:0}
+.card.food{border-top:3px solid var(--gold)}
+.card.party{border-top:3px solid var(--wine)}
+.card-top{padding:18px 18px 10px}
+.card-kicker{display:flex;gap:6px;align-items:center;justify-content:space-between;margin-bottom:10px}
+.pill{border-radius:40px;background:#efe8dd;padding:4px 9px;color:#61574b;font-size:10px;font-weight:700}
+.pill.official{background:#e7eee3;color:#476247}
+.pill.option{background:#f3e9de;color:#8a5e3d}
+.card h3{font-size:24px;line-height:1.16;font-weight:500;margin:0 0 8px}
+.address{color:var(--muted);font-size:12px;margin:0 0 10px}
+.description{margin:0;color:#625b55}
+.card-bottom{margin-top:auto;padding:12px 18px 17px}
+.meta{display:grid;gap:7px;margin:14px 0}
+.meta-row{display:flex;gap:9px;align-items:flex-start;font-size:12px}
+.symbol{color:var(--gold);min-width:17px}
+.look{background:#f0efe7;border-radius:8px;padding:10px 11px;color:#4c5748}
+.look b{font-size:10px;letter-spacing:.12em;text-transform:uppercase;display:block;margin-bottom:3px}
+.look span{font-size:12px}
+.actions{display:grid;grid-template-columns:1fr 1fr auto;gap:7px;margin-top:12px}
+.actions .btn{font-size:11px;padding:9px 8px}
+.iconbtn{min-width:39px}
+.iconbtn.selected{background:var(--wine);color:white}
+.day-block{margin-bottom:32px}
+.day-title{display:flex;gap:13px;align-items:center;margin:26px 0 15px}
+.day-num{background:var(--wine);color:#fff;border-radius:10px;padding:9px 12px;font-family:'Playfair Display',serif;font-size:23px}
+.day-title h3{font-size:23px;font-weight:500;margin:0}
+.day-title small{display:block;color:var(--muted)}
+.photo-details{margin-top:10px;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.photo-details summary{cursor:pointer;padding:10px 12px;font-size:12px;color:var(--wine);font-weight:700}
+.photo-content{padding:0 12px 12px;font-size:12px;color:#625b55}
+.photo-content p{margin:0 0 9px}
+.photo-content a{color:var(--wine);font-weight:700}
+.photo-preview{height:120px;border-radius:8px;background:linear-gradient(135deg,#e9ded0,#d6c2b3 50%,#d9d8c9);display:flex;align-items:center;justify-content:center;color:#6d594e;text-align:center;padding:15px;margin-bottom:10px}
+.note{background:#f0e9df;border-left:3px solid var(--gold);padding:13px 16px;border-radius:0 10px 10px 0;font-size:12px;color:#63584d;margin:22px 0}
+.empty{text-align:center;border:1px dashed var(--line);padding:50px 20px;border-radius:12px;color:var(--muted)}
+.currency-section{margin-top:36px}
+.converter{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:0 5px 19px #36251c0a}
+.convert-grid{display:grid;grid-template-columns:1fr 1fr auto 1fr;gap:12px;align-items:end}
+.convert-grid label,.rate-grid label{display:grid;gap:6px;color:var(--muted);font-size:12px;font-weight:700}
+.swap{border:1px solid var(--line);border-radius:10px;background:#f0e9df;color:var(--wine);height:45px;width:43px;font-size:23px}
+.fx-result{margin-top:18px;border-radius:13px;padding:18px 20px;background:#f3efe7;display:grid;gap:3px}
+.fx-result span,.fx-result small{color:var(--muted);font-size:12px}
+.fx-result strong{font:500 clamp(26px,5vw,38px) 'Playfair Display',Georgia,serif;color:var(--wine)}
+.fx-settings{margin-top:15px}
+.fx-settings summary{cursor:pointer;font-size:12px;color:var(--olive);font-weight:700}
+.fx-settings p,.fx-settings small{font-size:12px;color:var(--muted)}
+.rate-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:12px 0}
+.fx-status{font-size:12px;color:var(--olive);margin-top:10px}
+.budget-section{margin:35px 0}
+.budget-details{border:1px solid var(--line);border-radius:13px;background:var(--paper);overflow:hidden}
+.budget-details>summary{list-style:none;padding:16px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;color:var(--muted);font-size:13px;cursor:pointer}
+.budget-details>summary::-webkit-details-marker{display:none}
+.budget-details>summary small{font-size:11px;color:var(--muted)}
+.budget-inner{padding:0 10px 10px}
+.budget{background:var(--wine2);color:#fff7eb;border-radius:17px;padding:25px;display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.budget h3{font-size:30px;font-weight:400;margin:0 0 6px}
+.budget .big{font:500 32px 'Playfair Display',serif;color:#f1d3a2}
+.budget p{color:#eaded7}
+.budget .row{display:flex;justify-content:space-between;border-bottom:1px solid #ffffff30;padding:8px 0;font-size:12px}
+.budget small{color:#ddc8c0}
+.footer{text-align:center;padding:55px 20px 95px;color:var(--muted);font-size:12px}
+.footer .heart{font-size:28px;color:var(--wine)}
+.bottom-nav{display:none}
+.toast{position:fixed;bottom:85px;left:50%;transform:translateX(-50%);background:var(--wine2);color:white;padding:10px 17px;border-radius:50px;box-shadow:var(--shadow);z-index:60;font-size:12px;opacity:0;pointer-events:none;transition:.25s}
+.toast.show{opacity:1}
+.counter{font-size:12px;color:var(--muted)}
+#guia,#cambio,#orcamento{scroll-margin-top:135px}
+@media(max-width:900px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:640px){
+ .shell{padding:0 15px}
+ .hero{min-height:400px}
+ .hero-content{padding:70px 22px 58px}
+ .hero h1{font-size:53px}
+ .stats{gap:7px}
+ .stat{padding:12px 7px}
+ .stat strong{font-size:21px}
+ .stat span{font-size:9px}
+ .section-head{margin-top:32px}
+ .filters{grid-template-columns:1fr 1fr}
+ .filters input{grid-column:1/-1}
+ .cards{grid-template-columns:1fr;gap:12px}
+ .budget{grid-template-columns:1fr}
+ .converter{padding:16px}
+ .convert-grid{grid-template-columns:1fr 1fr}
+ .convert-grid label:first-child{grid-column:1/-1}
+ .convert-grid label:nth-child(2){grid-column:1/-1}
+ .convert-grid .swap{grid-column:1;grid-row:3;width:100%}
+ .convert-grid label:last-child{grid-column:2;grid-row:3}
+ .rate-grid{grid-template-columns:1fr}
+ .bottom-nav{position:fixed;bottom:0;left:0;right:0;display:grid;grid-template-columns:repeat(4,1fr);background:#fffdf9f5;backdrop-filter:blur(15px);border-top:1px solid var(--line);z-index:30;padding:8px 4px max(8px,env(safe-area-inset-bottom))}
+ .bottom-nav button{background:none;border:0;color:var(--muted);font-size:10px;display:grid;gap:2px;justify-items:center}
+ .bottom-nav button span{font-size:19px}
+ .footer{padding-bottom:115px}
+}
 </style>
 </head>
 <body>
-<header class="hero" id="inicio"><div class="hero-content"><div class="eyebrow">Uma história para viver a dois</div><div class="ornament">✦</div><h1>Nossa <em>Lua de Mel</em></h1><div class="sub">Buenos Aires, entre cafés, encontros e descobertas</div><div class="hero-date">07 — 14 Novembro · 2026 · Argentina & Uruguai</div><div class="hero-actions"><a class="btn btn-primary" href="#guia">Explorar nosso roteiro ↓</a><a class="btn" href="#cambio">Conversor de moedas ↗</a></div></div></header>
-<main class="shell"><div class="stats"><div class="stat"><strong>8</strong><span>dias juntos</span></div><div class="stat"><strong>2</strong><span>países</span></div><div class="stat"><strong>∞</strong><span>memórias</span></div></div>
-<section id="guia"><div class="section-head"><div><div class="eyebrow" style="color:var(--gold)">Nosso pequeno universo portenho</div><h2>O guia da viagem</h2><p>O roteiro planejado e todas as possibilidades para escolher na hora.</p></div><span class="counter" id="totalCount"></span></div>
-<div class="tools"><div class="tabs" id="dayTabs" aria-label="Filtrar por dia"></div><div class="filters"><input class="field" id="search" type="search" placeholder="⌕ Buscar restaurante, passeio, festa..." aria-label="Buscar lugares"><select class="field" id="region" aria-label="Região"><option value="all">Todas as regiões</option></select><select class="field" id="category" aria-label="Categoria"><option value="all">Todas as categorias</option><option value="Gastronomia">🍷 Gastronomia</option><option value="Atração">✦ Atrações</option><option value="Cultura">🏛 Cultura</option><option value="Transporte">🚆 Transporte</option><option value="Festa">♫ Festas</option></select></div></div>
-<div class="summary"><span id="resultInfo"></span><button class="btn" id="resetBtn" style="padding:7px 12px">Limpar filtros</button></div><div id="results"></div></section>
-<section id="cambio" class="currency-section"><div class="section-head"><div><div class="eyebrow" style="color:var(--gold)">Para aproveitar sem fazer contas</div><h2>Conversor de moedas</h2><p>Real, peso argentino, dólar e peso uruguaio.</p></div></div>
-<div class="converter"><div class="convert-grid"><label>Valor<input id="fxAmount" type="number" min="0" step="any" inputmode="decimal" value="100" class="field"></label><label>De<select id="fxFrom" class="field"><option value="BRL">BRL · Real</option><option value="ARS">ARS · Peso argentino</option><option value="USD">USD · Dólar</option><option value="UYU">UYU · Peso uruguaio</option></select></label><button id="fxSwap" class="swap" type="button" aria-label="Inverter moedas">⇄</button><label>Para<select id="fxTo" class="field"><option value="ARS">ARS · Peso argentino</option><option value="BRL">BRL · Real</option><option value="USD">USD · Dólar</option><option value="UYU">UYU · Peso uruguaio</option></select></label></div><div class="fx-result"><span>Valor convertido</span><strong id="fxResult" aria-live="polite">—</strong><small id="fxInfo">Taxas de referência editáveis, não cotação ao vivo.</small></div><details class="fx-settings"><summary>⚙ Ajustar cotações de referência</summary><p>Informe quantas unidades de cada moeda equivalem a R$ 1. Atualize conforme a Wise ou o câmbio que realmente utilizar. Os valores ficam salvos neste navegador.</p><div class="rate-grid"><label>ARS por R$ 1<input class="field" id="rateARS" type="number" min="0.000001" step="any" inputmode="decimal"></label><label>USD por R$ 1<input class="field" id="rateUSD" type="number" min="0.000001" step="any" inputmode="decimal"></label><label>UYU por R$ 1<input class="field" id="rateUYU" type="number" min="0.000001" step="any" inputmode="decimal"></label></div><small>Referências iniciais apenas ilustrativas: ARS 276 / R$; USD 1 / R$ 5,37; UYU 8 / R$. Não incluem spread, impostos ou tarifas.</small></details></div></section>
-<section id="orcamento" class="budget-section"><details class="budget-details"><summary><span>▦ Planejamento financeiro</span><small>Ver estimativa total e divisão de gastos</small></summary><div class="budget-inner"><div class="budget"><div><h3>Viajar com leveza</h3><div class="big">R$ 3.800–4.100</div><p>Referência aproximada de US$ 707–763, usando câmbio ilustrativo de R$ 5,37 por dólar. Não é cotação em tempo real.</p><small>Preços em ARS e reais são estimativas e podem mudar. Verificar tarifas e disponibilidade antes de reservar.</small></div><div><div class="row"><span>Alimentação</span><b>R$ 1.600</b></div><div class="row"><span>Transporte local + Uber</span><b>R$ 400</b></div><div class="row"><span>Ferry Colonia + almoço</span><b>R$ 800</b></div><div class="row"><span>Barco em Tigre</span><b>R$ 200</b></div><div class="row"><span>Bares e festas</span><b>R$ 500</b></div><div class="row"><span>Compras / reserva</span><b>R$ 400</b></div><small>Distribuição indicativa total: R$ 3.900. Ingressos extras, como Jardim Japonês, devem caber na reserva ou elevar o total.</small></div></div></div></details></section>
-<section><div class="section-head"><div><div class="eyebrow" style="color:var(--gold)">Detalhes importantes</div><h2>Antes de sair</h2></div></div><div class="note"><b>Reservas e horários:</b> tour Plaza de Mayo 09/11 às 11h e tour San Telmo 12/11 às 11h informados como reservados. Confirmar ponto de encontro. Colonia Express, barco Tigre, festas, restaurantes e valores precisam de conferência. O retorno de 14/11 às 18h exige confirmar se o aeroporto é AEP ou EZE: se for Ezeiza, sair mais cedo do hotel.</div></section>
-</main><footer class="footer"><div class="heart">♥</div><div class="serif" style="font-size:23px;color:var(--wine)">Que seja inesquecível.</div><p>Buenos Aires · Colonia · 2026</p><p>Feito para guardar histórias, descobrir sabores e escolher o próximo passeio juntos.</p></footer>
-<nav class="bottom-nav" aria-label="Atalhos"><button onclick="go('inicio')"><span>♡</span>Início</button><button onclick="go('guia');setMode('all')"><span>◫</span>Roteiro</button><button onclick="go('guia');setMode('options')"><span>✧</span>Opções</button><button onclick="go('guia');setMode('favorites')"><span>♥</span>Favoritos</button></nav><div id="toast" class="toast" role="status"></div>
-<script>
-/* DADOS EDITÁVEIS — dia: 07 a 14 ou 'todos'; status: 'official' ou 'option'.
-   Preços são referências por casal, exceto quando indicado. */
-const D=[];
-function add(day,region,category,name,address,price,description,look,status='official',time='',note=''){D.push({id:'p'+D.length,day,region,category,name,address,price,description,look,status,time,note});}
-// 07/11 — CHEGADA
-add('07','Centro','Transporte','Aeroparque → Broadway Hotel','Aeroparque Jorge Newbery, Buenos Aires','Uber R$ 45–75 casal','Chegada prevista às 21h. Ir de Uber ao hotel e deixar as malas.','Look viagem · confortável', 'official','21h');
-add('07','Centro','Atração','Broadway Hotel & Suites','Av. Corrientes 1173, Buenos Aires','Hospedagem não incluída','Nossa base no coração de Buenos Aires. Check-in previsto para 22h30–23h.','Look viagem · casual','official','22h30');
-add('07','Centro','Gastronomia','Revire Brasas Bravas','Av. Corrientes 1124, Buenos Aires','R$ 180–300 casal','Primeiro jantar: parrilla, provoleta e carne argentina. Confirmar horário limite da cozinha antes de ir.','Smart casual · noite especial','official','23h');
-add('07','Centro','Atração','Obelisco','Av. 9 de Julio e Av. Corrientes, Buenos Aires','Gratuito','Foto noturna clássica se ainda houver energia depois do jantar.','Casual chic · fotos','official','Após jantar');
-add('07','Centro','Gastronomia','Chiquilín','Sarmiento 1599, Buenos Aires','R$ 220–350 casal','Plano B para jantar de chegada; confirmar se a cozinha ainda aceita pedidos.','Smart casual','option','Noite');
-add('07','Centro','Gastronomia','Pizzería Güerrín','Av. Corrientes 1368, Buenos Aires','R$ 65–127 casal','Plano C econômico: pizza argentina e fugazzeta perto do hotel.','Casual urbano','option','Noite');
-// 08/11
-add('08','San Telmo','Atração','Feria de San Telmo / Plaza Dorrego','Plaza Dorrego, Humberto 1º e Defensa, Buenos Aires','Gratuito','Feira de domingo, antiguidades, artesanato e ruas históricas.','Linho leve · tênis confortável','official','09h30');
-add('08','San Telmo','Atração','Estátua da Mafalda','Defensa 700, esquina Chile, Buenos Aires','Gratuito','Parada para foto durante a caminhada por San Telmo.','Casual fotogênico','official','11h');
-add('08','San Telmo','Gastronomia','Mercado de San Telmo','Bolívar 970, Buenos Aires','R$ 70–150 casal','Mercado gastronômico histórico; ótima parada para almoço e petiscos.','Casual urbano','official','12h');
-add('08','San Telmo','Gastronomia','El Hornero','Mercado de San Telmo, Bolívar 970, Buenos Aires','2 empanadas ~ARS 9.600 (referência)','Empanadas para provar no mercado. Valor retirado de vídeo, sujeito a alteração.','Casual de passeio','official','12h30');
-add('08','La Boca','Atração','Caminito','Caminito, La Boca, Buenos Aires','Gratuito','Casas coloridas, arte e fotografias; visitar durante o dia.','Cores neutras + acessório marcante','official','14h');
-add('08','La Boca','Atração','La Bombonera — exterior','Brandsen 805, La Boca, Buenos Aires','Gratuito por fora','Fachada do estádio do Boca Juniors; ingresso apenas se decidirem entrar.','Streetwear · tênis','official','15h');
-add('08','La Boca','Gastronomia','Pizzería Banchero','Av. Almirante Brown 1200, La Boca, Buenos Aires','R$ 70–140 casal (estimativa)','Fugazzeta tradicional; lanche ou refeição antes de voltar ao Centro.','Casual de passeio','official','15h30');
-add('08','La Boca','Gastronomia','La Glorieta de Quique','La Boca, Buenos Aires — localização exata a confirmar','Choripán ~ARS 16.000 (referência)','Alternativa vista em vídeo; não salvar pin sem conferir endereço.','Streetwear','option');
-add('08','San Telmo','Gastronomia','MERCI','Carlos Calvo 455, San Telmo, Buenos Aires','Consumo variável','Espaço gastronômico para café e lanche.','Casual criativo','option');
-add('08','San Telmo','Gastronomia','Hierro Parrilla — Mercado','Bolívar 970, Mercado de San Telmo, Buenos Aires','Conferir cardápio','Parrilla como alternativa dentro do mercado.','Casual urbano','option');
-add('08','San Telmo','Gastronomia','La Choripanería','Mercado de San Telmo, Bolívar 970, Buenos Aires','Conferir cardápio','Choripán e lanche rápido no mercado.','Casual urbano','option');
-add('08','San Telmo','Gastronomia','Nuestra Parrilla','San Telmo, Buenos Aires — endereço a confirmar','Conferir cardápio','Parrilla informal. Confirmar localização antes de ir.','Casual urbano','option');
-add('08','La Boca','Cultura','Colón Fábrica','Av. Pedro de Mendoza 2163, La Boca, Buenos Aires','Ingresso a confirmar','Cenários e figurinos do Teatro Colón; plano B em dia de chuva.','Casual elegante','option');
-add('08','San Telmo','Cultura','Museo de Arte Moderno','Av. San Juan 350, Buenos Aires','Ingresso a confirmar','Museu coberto e alternativa cultural para chuva.','Minimalista urbano','option');
-add('08','San Telmo','Cultura','El Zanjón de Granados','Defensa 755, Buenos Aires','Ingresso pago · confirmar','Casarão histórico e estruturas subterrâneas em visita guiada.','Casual elegante','option');
-// 09/11
-add('09','Centro','Cultura','Free tour Plaza de Mayo','Plaza de Mayo, Buenos Aires — ponto exato da reserva','Gratuito / gorjeta opcional','Tour guiado reservado para as 11h. Verificar ponto de encontro no voucher.','Linho + tênis confortável','official','11h');
-add('09','Centro','Atração','Catedral Metropolitana','San Martín 27, Buenos Aires','Gratuito','Arquitetura e história na Plaza de Mayo.','Casual elegante','official','12h30');
-add('09','Centro','Atração','Casa Rosada — exterior','Balcarce 50, Buenos Aires','Gratuito por fora','Fotografias da fachada e arredores da praça.','Casual urbano','official','13h');
-add('09','Centro','Atração','Avenida de Mayo e Calle Florida','Av. de Mayo / Calle Florida, Buenos Aires','Gratuito','Passeio arquitetônico e comércio do Microcentro.','Casual urbano','official','14h');
-add('09','Centro','Atração','Galerías Pacífico','Florida 737, Buenos Aires','Entrada gratuita','Galeria histórica e lojas; alternativa coberta se chover.','Smart casual','official','15h');
-add('09','Centro','Cultura','Palacio Libertad','Sarmiento 151, Buenos Aires','Consultar programação','Centro cultural; visitar se estiver aberto e houver tempo.','Casual elegante','official','16h');
-add('09','Puerto Madero','Atração','Puente de la Mujer','Dique 3, Puerto Madero, Buenos Aires','Gratuito','Passeio ao entardecer pela orla revitalizada.','Casual chic · fotos','official','17h');
-add('09','Centro','Gastronomia','Santos Manjares','Paraguay 938, Buenos Aires','R$ 160–280 casal','Parrilla argentina para jantar; menu de referência sujeito a alteração.','Smart casual · jantar','official','20h');
-add('09','Centro','Gastronomia','Café Saint Moritz','Esmeralda 890, Buenos Aires','R$ 40–90 casal','Café tradicional e pausa no Centro.','Casual elegante','option');
-add('09','Centro','Cultura','Manzana de las Luces','Perú 222, Buenos Aires','Visitas a confirmar','Conjunto histórico próximo da Plaza de Mayo.','Casual elegante','option');
-add('09','Centro','Cultura','Teatro Colón — visita guiada','Cerrito 628, Buenos Aires','R$ 100–200 por pessoa (referência)','Visita guiada paga ao interior do teatro. Conferir tarifas e horários.','Elegante discreto','option');
-add('09','Centro','Gastronomia','Parrilla Peña','Rodríguez Peña 682, Buenos Aires','Conferir cardápio','Alternativa tradicional de parrilla no Centro.','Smart casual','option');
-// 10/11
-add('10','Puerto Madero','Transporte','Colonia Express — terminal BA','Av. Elvira Rawson de Dellepiane 155, Buenos Aires','Pacote referência ~R$ 800 casal','Ferry de ida e volta a Colonia; Day Tour Clásico anunciado com almoço sem bebidas. Confirmar preço, horários, documentação e terminal no bilhete.','Look viagem · documentos à mão','official','Saída cedo');
-add('10','Colonia','Atração','Portón de Campo','Portón de Campo, Colonia del Sacramento, Uruguay','Gratuito','Portão histórico de entrada da cidade colonial.','Linho leve · tênis','official','Manhã');
-add('10','Colonia','Atração','Calle de los Suspiros','Calle de los Suspiros, Colonia del Sacramento, Uruguay','Gratuito','Rua de pedra emblemática, perfeita para fotografias.','Romântico casual','official','Manhã');
-add('10','Colonia','Atração','Plaza Mayor','Plaza Mayor, Colonia del Sacramento, Uruguay','Gratuito','Centro do bairro histórico e parada para explorar.','Casual elegante','official','Meio-dia');
-add('10','Colonia','Atração','Faro de Colonia','Faro de Colonia del Sacramento, Uruguay','Área externa gratuita; subida a confirmar','Farol histórico e vista para o Rio da Prata.','Casual confortável','official','Tarde');
-add('10','Colonia','Atração','Rambla de las Américas','Rambla de las Américas, Colonia del Sacramento, Uruguay','Gratuito','Caminhada na orla antes de voltar ao ferry.','Casual leve','official','Tarde');
-// 11/11
-add('11','Retiro','Transporte','Estación Retiro Mitre','Av. Dr. José María Ramos Mejía 1430, Buenos Aires','Trem econômico · confirmar tarifa','Tomar Línea Mitre, ramal Retiro–Tigre, não o ramal Bartolomé Mitre.','Look passeio · tênis','official','08h');
-add('11','Tigre','Transporte','Estación Tigre','Estación Tigre, Tigre, Buenos Aires','Incluído no trem','Desembarque para caminhar à estação fluvial.','Casual confortável','official','09h');
-add('11','Tigre','Atração','Passeio de barco pelo Delta','Estación Fluvial Domingo Faustino Sarmiento, Tigre','R$ 100–200 casal (estimativa)','Passeio de aproximadamente 1h; preço e saídas a confirmar no dia.','Casual leve · proteção solar','official','10h');
-add('11','Tigre','Gastronomia','Puerto de Frutos','Sarmiento 160, Tigre, Buenos Aires','Almoço R$ 90–160 casal','Mercado, artesanato, restaurantes e almoço à beira do Delta.','Casual confortável','official','11h30');
-add('11','Palermo','Atração','Palermo Soho / Plaza Serrano','Plaza Inmigrantes de Armenia, Palermo, Buenos Aires','Gratuito','Cafés, lojas, grafites e ruas para caminhar após Tigre.','Urbano chic · tênis','official','16h');
-add('11','Palermo','Gastronomia','Maru Botana — Palermo','El Salvador 5900, Palermo, Buenos Aires','Medialuna ~ARS 3.000; café ~ARS 4–6 mil','Café da tarde. Preços de referência de vídeo, não cotação atual.','Casual charmoso','official','Tarde');
-add('11','Palermo','Gastronomia','Hierro Bodegón','Fitz Roy 1722, Palermo, Buenos Aires','R$ 130–230 casal','Milanesa, risoto e comida de bodegón.','Smart casual','option');
-add('11','Tigre','Cultura','Museo de Arte Tigre','Paseo Victorica 972, Tigre, Buenos Aires','Ingresso a confirmar','Museu histórico à beira do rio, se houver tempo.','Casual elegante','option');
-add('11','Palermo','Gastronomia','Lucciano’s — Palermo','Palermo, Buenos Aires — escolher unidade','R$ 25–35 por sorvete (estimativa)','Sorvetes e sobremesas para uma pausa.','Casual urbano','option');
-add('11','Palermo','Gastronomia','Parrilla Sanabria','Palermo, Buenos Aires — endereço a confirmar','Conferir cardápio','Parrilla mencionada no catálogo, verificar unidade.','Smart casual','option');
-add('11','Palermo','Gastronomia','Celia Parrilla Argentina','Palermo, Buenos Aires — endereço a confirmar','Conferir cardápio','Outra alternativa de parrilla; confirmar localização.','Smart casual','option');
-// 12/11
-add('12','San Telmo','Cultura','Free tour San Telmo','San Telmo, Buenos Aires — ponto exato da reserva','Gratuito / gorjeta opcional','Tour reservado para as 11h. Conferir ponto de encontro no voucher.','Casual confortável','official','11h');
-add('12','San Telmo','Gastronomia','Almoço no Mercado de San Telmo','Bolívar 970, Buenos Aires','R$ 80–150 casal','Escolher entre empanadas, choripán e parrilla.','Casual urbano','official','13h');
-add('12','Recoleta','Atração','Floralis Genérica','Plaza de las Naciones Unidas, Buenos Aires','Gratuito','Escultura metálica icônica e fotos na Recoleta.','Romântico urbano','official','14h30');
-add('12','Recoleta','Cultura','Museo Nacional de Bellas Artes','Av. del Libertador 1473, Buenos Aires','Coleção permanente gratuita','Museu de arte, visita ajustável conforme disposição.','Casual elegante','official','15h30');
-add('12','Recoleta','Atração','El Ateneo Grand Splendid','Av. Santa Fe 1860, Buenos Aires','Gratuito','Livraria em antigo teatro; uma das paradas mais fotogênicas.','Smart casual · fotos','official','17h');
-add('12','Recoleta','Cultura','Centro Cultural Recoleta','Junín 1930, Buenos Aires','Programação a confirmar','Exposições e espaço coberto, ótimo para chuva.','Casual criativo','option');
-add('12','Recoleta','Cultura','Biblioteca Nacional','Agüero 2502, Buenos Aires','Acesso a confirmar','Arquitetura brutalista e atividades culturais.','Minimalista urbano','option');
-add('12','Palermo','Atração','Barrio Parque / Palermo Chico','Plaza Alemania, Palermo Chico, Buenos Aires','Gratuito','Ruas arborizadas e mansões; encaixa perto da Recoleta.','Casual elegante','option');
-add('12','Almagro','Festa','Feliza','Av. Córdoba 3271, Buenos Aires','Consumo variável','Bar e espaço queer para drinks e ambiente descontraído.','Noite urbana · criativo','option','Noite');
-// 13/11
-add('13','Belgrano','Atração','Barrio Chino','Arribeños 2100, Belgrano, Buenos Aires','Entrada grátis; consumo R$ 50–120 casal','Arco chinês, mercados, doces e lojas asiáticas. Subte D até Juramento ou trem Belgrano C.','Streetwear chic · tênis','official','09h30');
-add('13','Palermo','Atração','Jardín Japonés','Av. Casares 3450, Palermo, Buenos Aires','ARS 48.000 casal (~R$ 174, referência)','Pontes, carpas, bonsais e jardins. Reservar 1h–1h30; confirmar ingresso atualizado.','Linho claro · look romântico','official','12h15');
-add('13','Palermo','Atração','El Rosedal','Av. Infanta Isabel, Parque Tres de Febrero, Buenos Aires','Gratuito','Jardins, lago e descanso antes da noite.','Casual fotogênico','official','14h');
-add('13','Palermo','Atração','Plaza Serrano — cafés e lojas','Plaza Inmigrantes de Armenia, Palermo Soho, Buenos Aires','Consumo variável','Café, compras, grafites e jantar em Palermo Soho.','Casual chic · transição para noite','official','16h');
-add('13','Palermo','Festa','Peuteo — pré-festa','Gurruchaga 1867, Palermo, Buenos Aires','Drinks e consumo variável','Bar gay para começar a noite. Verificar abertura e horário.','Noite pop · fashion','option','22h');
-add('13','Colegiales','Festa','Fiesta Plop!','Teatro Vorterix, Av. Federico Lacroze 3455 — local habitual, confirmar','Ingresso a confirmar','Festa LGBTQ+ pop, divas e performances. Edição de 13/11 NÃO confirmada.','Pop statement · noite','option','Após 23h');
-add('13','Palermo','Festa','RHEO','Complejo Crobar, Av. Cnel. Marcelino E. Freyre — local habitual','Ingresso a confirmar','Circuit gay e eletrônica. Confirmar se haverá edição em 13/11 e onde.','Clubwear · preto','option','Madrugada');
-add('13','Palermo','Festa','HUMAN!','Local variável; edições anteriores no Crobar, Palermo','Ingresso a confirmar','Festa eletrônica LGBTQ+ itinerante. Sem edição confirmada em 13/11.','Clubwear · fashion','option','Madrugada');
-add('13','Almagro','Festa','Amerika','Gascón 1040, Buenos Aires','Ingresso e consumo a confirmar','Boate gay grande com múltiplas pistas. Conferir programação de sexta.','Balada urbana','option','Noite');
-add('13','Palermo','Festa','Club 69','Niceto Club, Cnel. Niceto Vega 5510, Buenos Aires','Ingresso a confirmar','Festa queer com performances; costuma ocorrer em quintas. Confirmar se haverá edição sexta.','Fashion ousado','option','Noite');
-add('13','Almagro','Festa','Glam Disco','José A. Cabrera 3046, Buenos Aires','Ingresso a confirmar','Boate gay tradicional, alternativa para dançar.','Clubwear · elegante','option','Noite');
-add('13','Palermo','Festa','Random Fiesta — Niceto Club','Cnel. Niceto Vega 5510, Buenos Aires','ARS 20.000 por pessoa (anúncio de referência)','Festa anunciada para 13/11 às 23h59; não exclusivamente LGBT+. Confirmar ingressos e evento.','Noite disco · urbano','option','23h59');
-add('13','Palermo','Festa','FOMO House Party — The Lift','Godoy Cruz 1967, Palermo, Buenos Aires','ARS 15.000 por pessoa (anúncio de referência)','House/eletrônica anunciada para 13/11 às 23h59; não exclusivamente LGBT+.','Clubwear · minimal','option','23h59');
-add('13','Almagro','Festa','Feliza — bar queer','Av. Córdoba 3271, Buenos Aires','Consumo variável','Alternativa mais tranquila para drinks e encontro.','Casual noturno','option','Noite');
-add('13','Caballito','Atração','Barrio Inglés de Caballito','Pedro Goyena e Emilio Mitre, Caballito, Buenos Aires','Gratuito','Casas de inspiração inglesa. Passeio extra se quiserem trocar algum programa.','Casual vintage','option');
-add('13','Villa Crespo','Gastronomia','Bodegón Los Hermanos','Juan Ramírez de Velasco 1059, Buenos Aires','Conferir cardápio','Bodegón tradicional, requer deslocamento.','Smart casual','option');
-// 14/11
-add('14','Centro','Gastronomia','Café da manhã de despedida','Próximo ao Broadway Hotel, Av. Corrientes 1173','R$ 40–90 casal','Café sem pressa, preferencialmente perto do hotel.','Casual leve','official','09h');
-add('14','Centro','Atração','Calle Florida e Galerías Pacífico','Florida 737, Buenos Aires','Gratuito; compras à parte','Últimas compras de alfajores, chocolates e lembranças.','Casual chic · confortável','official','10h');
-add('14','Centro','Gastronomia','Almoço no Centro','Próximo ao hotel, Av. Corrientes 1173','R$ 80–160 casal','Almoço prático antes de retirar as malas.','Casual viagem','official','12h30');
-add('14','Centro','Transporte','Check-out e Uber ao aeroporto','Broadway Hotel & Suites, Av. Corrientes 1173','Uber estimado AEP R$ 45–75; EZE pode ser maior','Voo às 18h. Confirmar aeroporto e antecedência: para EZE sair mais cedo que para AEP.','Look viagem · confortável','official','13h30–14h30');
-add('14','Retiro','Gastronomia','Maru Botana — Retiro','Suipacha 1371, Buenos Aires','Consumo variável','Café alternativo se houver tempo antes das compras.','Casual charmoso','option');
-// Itens extras do catálogo
-add('todos','Centro','Gastronomia','La Planchita — Microcentro','Microcentro, Buenos Aires — endereço a confirmar','Conferir cardápio','Alternativa gastronômica mencionada no catálogo.','Casual urbano','option');
-add('todos','Centro','Gastronomia','La Piedad — sándwich de miga','Buenos Aires — endereço a confirmar','Conferir cardápio','Provar sanduíche de miga; escolher unidade após confirmar localização.','Casual de café','option');
-add('todos','Palermo','Atração','Bosques de Palermo','Parque Tres de Febrero, Palermo, Buenos Aires','Gratuito','Parques e caminhos verdes para relaxar ou fotografar.','Casual esportivo','option');
-add('todos','Centro','Cultura','Teatro Colón — fachada','Cerrito 628, Buenos Aires','Gratuito por fora','Foto externa caso não façam a visita guiada.','Casual elegante','option');
-const DAYS=[['07','Sáb 07'],['08','Dom 08'],['09','Seg 09'],['10','Ter 10'],['11','Qua 11'],['12','Qui 12'],['13','Sex 13'],['14','Sáb 14']];
-const DAY_TITLES={'07':'Chegada & primeiras luzes','08':'San Telmo & La Boca','09':'Centro histórico & Puerto Madero','10':'Colonia del Sacramento · Uruguai','11':'Delta do Tigre & Palermo','12':'San Telmo & Recoleta','13':'Bairros temáticos & noite de festa','14':'Despedida & voo às 18h'};
-const state={day:'all',mode:'all',region:'all',category:'all',search:''};
-const load=(k)=>{try{return JSON.parse(localStorage.getItem(k)||'[]')}catch(e){return []}};
-let fav=new Set(load('honeymoon_favs')),visited=new Set(load('honeymoon_visited'));
-const persist=()=>{try{localStorage.setItem('honeymoon_favs',JSON.stringify([...fav]));localStorage.setItem('honeymoon_visited',JSON.stringify([...visited]))}catch(e){}};
-const esc=(v)=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const url=(p)=>'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(p.address.includes('confirmar')?p.name+', Buenos Aires, Argentina':p.address);
-const dayLabel=(d)=>DAYS.find(x=>x[0]===d)?.[1]||'Flexível';
-const icon=(c)=>({'Gastronomia':'🍷','Atração':'✦','Cultura':'🏛','Transporte':'🚆','Festa':'♫'})[c]||'✦';
-function toast(t){const el=document.getElementById('toast');el.textContent=t;el.classList.add('show');clearTimeout(window._toast);window._toast=setTimeout(()=>el.classList.remove('show'),2300)}
-function setMode(mode){state.mode=mode;state.day='all';render();go('guia')}
-function setDay(d){state.day=d;state.mode='all';render()}
-function go(id){document.getElementById(id).scrollIntoView({behavior:'smooth',block:'start'})}
-function filters(){return D.filter(p=>(state.day==='all'||p.day===state.day||p.day==='todos')&&(state.mode==='all'||(state.mode==='options'&&p.status==='option')||(state.mode==='official'&&p.status==='official')||(state.mode==='favorites'&&fav.has(p.id))||(state.mode==='visited'&&visited.has(p.id)))&&(state.region==='all'||p.region===state.region)&&(state.category==='all'||p.category===state.category)&&(!state.search||[p.name,p.description,p.address,p.region,p.look].join(' ').toLocaleLowerCase('pt-BR').includes(state.search.toLocaleLowerCase('pt-BR'))))}
-function card(p){let note=`${p.name}\n${dayLabel(p.day)} ${p.time||''}\n${p.address}\nCategoria: ${p.category}\nPreço: ${p.price}\n${p.description}\nLook: ${p.look}${p.note?'\n'+p.note:''}`;return `<article class="card ${p.category==='Gastronomia'?'food':''} ${p.category==='Festa'?'party':''}"><div class="card-top"><div class="card-kicker"><span class="pill ${p.status}">${p.status==='official'?'✓ Roteiro oficial':'✧ Opcional'}</span><span class="pill">${icon(p.category)} ${esc(p.category)}</span></div><h3>${esc(p.name)}</h3><p class="address">⌖ ${esc(p.address)}</p><p class="description">${esc(p.description)}</p></div><div class="card-bottom"><div class="meta"><div class="meta-row"><span class="symbol">◷</span><span>${esc(dayLabel(p.day))}${p.time?' · '+esc(p.time):''} · ${esc(p.region)}</span></div><div class="meta-row"><span class="symbol">◇</span><span><b>${esc(p.price)}</b></span></div></div><div class="look"><b>✧ Sugestão de look</b><span>${esc(p.look)}</span></div><div class="actions"><a class="btn" target="_blank" rel="noopener noreferrer" href="${esc(url(p))}">⌖ Maps</a><button class="btn" data-action="copy" data-id="${p.id}">⧉ Nota</button><button class="btn iconbtn ${fav.has(p.id)?'selected':''}" data-action="fav" data-id="${p.id}" aria-label="${fav.has(p.id)?'Remover dos':'Adicionar aos'} favoritos">${fav.has(p.id)?'♥':'♡'}</button></div><button class="btn" data-action="visit" data-id="${p.id}" style="margin-top:8px;width:100%;font-size:11px">${visited.has(p.id)?'✓ Visitado · desfazer':'○ Marcar como visitado'}</button></div></article>`}
-function render(){const tabs=document.getElementById('dayTabs');tabs.innerHTML=[['all','Todos os dias'],...DAYS].map(([d,label])=>`<button class="chip ${state.day===d&&state.mode==='all'?'active':''}" data-day="${d}">${label}</button>`).join('')+[['official','Roteiro oficial'],['options','✧ Opcionais'],['favorites','♥ Favoritos'],['visited','✓ Visitados']].map(([m,label])=>`<button class="chip ${state.mode===m?'active':''}" data-mode="${m}">${label}</button>`).join('');const list=filters();document.getElementById('resultInfo').textContent=`${list.length} lugares encontrados · ${fav.size} favoritos · ${visited.size} visitados`;document.getElementById('totalCount').textContent=`${D.length} locais catalogados`;const root=document.getElementById('results');if(!list.length){root.innerHTML='<div class="empty">Nenhum lugar encontrado. Tente limpar os filtros ♡</div>';return}if(state.day==='all'&&state.mode==='all'&&state.region==='all'&&state.category==='all'&&!state.search){root.innerHTML=DAYS.map(([d,label])=>{const items=list.filter(p=>p.day===d);return `<section class="day-block"><div class="day-title"><span class="day-num">${d}</span><div><h3>${DAY_TITLES[d]}</h3><small>${label} de novembro · ${items.length} lugares</small></div></div><div class="cards">${items.map(card).join('')}</div></section>`}).join('')+`<section class="day-block"><div class="day-title"><span class="day-num">✦</span><div><h3>Extras para qualquer dia</h3><small>Sem compromisso no roteiro</small></div></div><div class="cards">${list.filter(p=>p.day==='todos').map(card).join('')}</div></section>`}else{root.innerHTML=`<div class="cards">${list.map(card).join('')}</div>`}}
-const regionSel=document.getElementById('region');[...new Set(D.map(p=>p.region))].sort((a,b)=>a.localeCompare(b,'pt-BR')).forEach(r=>{const op=document.createElement('option');op.value=r;op.textContent=r;regionSel.append(op)});
-document.getElementById('dayTabs').addEventListener('click',e=>{const el=e.target.closest('button');if(!el)return;if(el.dataset.day!==undefined)setDay(el.dataset.day);else if(el.dataset.mode)setMode(el.dataset.mode)});
-document.getElementById('results').addEventListener('click',async e=>{const b=e.target.closest('button[data-action]');if(!b)return;const p=D.find(x=>x.id===b.dataset.id);if(!p)return;const action=b.dataset.action;if(action==='fav'){fav.has(p.id)?fav.delete(p.id):fav.add(p.id);persist();render();toast('Favoritos atualizados ♡')}if(action==='visit'){visited.has(p.id)?visited.delete(p.id):visited.add(p.id);persist();render();toast('Roteiro atualizado ✓')}if(action==='copy'){const t=`${p.name}\nDia: ${dayLabel(p.day)} ${p.time||''}\nEndereço: ${p.address}\nCategoria: ${p.category}\nPreço: ${p.price}\nDescrição: ${p.description}\nLook: ${p.look}\nGoogle Maps: ${url(p)}`;try{await navigator.clipboard.writeText(t);toast('Nota copiada!')}catch(err){const area=document.createElement('textarea');area.value=t;document.body.append(area);area.select();document.execCommand('copy');area.remove();toast('Nota copiada!')}}});
-document.getElementById('search').addEventListener('input',e=>{state.search=e.target.value;render()});regionSel.addEventListener('change',e=>{state.region=e.target.value;render()});document.getElementById('category').addEventListener('change',e=>{state.category=e.target.value;render()});document.getElementById('resetBtn').addEventListener('click',()=>{state.day='all';state.mode='all';state.region='all';state.category='all';state.search='';regionSel.value='all';document.getElementById('category').value='all';document.getElementById('search').value='';render()});render();
 
-/* Conversor offline com taxas editáveis. Nunca apresentar como cotação em tempo real. */
+<header class="hero" id="inicio">
+ <div class="hero-content">
+  <div class="eyebrow">Uma história para viver a dois</div>
+  <div class="ornament">✦</div>
+  <h1>Nossa <em>Lua de Mel</em></h1>
+  <div class="sub">Buenos Aires, entre mimidas, descobertas e muito amor</div>
+  <div class="hero-date">07 — 14 Novembro · 2026 · Argentina & Uruguai</div>
+  <div class="hero-actions">
+   <a class="btn btn-primary" href="#guia">Explorar nosso roteiro ↓</a>
+   <a class="btn" href="#cambio">Conversor de moedas ↗</a>
+  </div>
+ </div>
+</header>
+
+<main class="shell">
+ <div class="stats">
+  <div class="stat"><strong>8</strong><span>dias juntos</span></div>
+  <div class="stat"><strong>2</strong><span>países</span></div>
+  <div class="stat"><strong>∞</strong><span>memórias</span></div>
+ </div>
+
+ <section id="guia">
+  <div class="section-head">
+   <div>
+    <div class="eyebrow" style="color:var(--gold)">Nosso pequeno universo portenho</div>
+    <h2>O guia da viagem</h2>
+    <p>O roteiro planejado e todas as possibilidades para escolher na hora.</p>
+   </div>
+   <span class="counter" id="totalCount"></span>
+  </div>
+  <div class="tools">
+   <div class="tabs" id="dayTabs" aria-label="Filtrar por dia"></div>
+   <div class="filters">
+    <input class="field" id="search" type="search" placeholder="⌕ Buscar restaurante, passeio, festa..." aria-label="Buscar lugares">
+    <select class="field" id="region" aria-label="Região"><option value="all">Todas as regiões</option></select>
+    <select class="field" id="category" aria-label="Categoria">
+     <option value="all">Todas as categorias</option>
+     <option value="Gastronomia">🍷 Gastronomia</option>
+     <option value="Atração">✦ Atrações</option>
+     <option value="Cultura">🏛 Cultura</option>
+     <option value="Transporte">🚆 Transporte</option>
+     <option value="Festa">♫ Festas</option>
+    </select>
+   </div>
+  </div>
+  <div class="summary">
+   <span id="resultInfo"></span>
+   <button class="btn" id="resetBtn" style="padding:7px 12px">Limpar filtros</button>
+  </div>
+  <div id="results"></div>
+ </section>
+
+ <section id="cambio" class="currency-section">
+  <div class="section-head">
+   <div>
+    <div class="eyebrow" style="color:var(--gold)">Para aproveitar sem fazer contas</div>
+    <h2>Conversor de moedas</h2>
+    <p>Real, peso argentino, dólar e peso uruguaio.</p>
+   </div>
+  </div>
+  <div class="converter">
+   <div class="convert-grid">
+    <label>Valor<input id="fxAmount" type="number" min="0" step="any" inputmode="decimal" value="100" class="field"></label>
+    <label>De<select id="fxFrom" class="field">
+     <option value="BRL">BRL · Real</option>
+     <option value="ARS">ARS · Peso argentino</option>
+     <option value="USD">USD · Dólar</option>
+     <option value="UYU">UYU · Peso uruguaio</option>
+    </select></label>
+    <button id="fxSwap" class="swap" type="button" aria-label="Inverter moedas">⇄</button>
+    <label>Para<select id="fxTo" class="field">
+     <option value="ARS">ARS · Peso argentino</option>
+     <option value="BRL">BRL · Real</option>
+     <option value="USD">USD · Dólar</option>
+     <option value="UYU">UYU · Peso uruguaio</option>
+    </select></label>
+   </div>
+   <div class="fx-result">
+    <span>Valor convertido</span>
+    <strong id="fxResult" aria-live="polite">—</strong>
+    <small id="fxInfo">Carregando taxas de referência...</small>
+   </div>
+   <div style="margin-top:13px">
+    <button class="btn" id="fxRefresh" type="button">↻ Atualizar cotação</button>
+    <div class="fx-status" id="fxStatus" role="status">Aguardando atualização.</div>
+   </div>
+   <details class="fx-settings">
+    <summary>⚙ Ajustar cotações manualmente</summary>
+    <p>Informe quantas unidades de cada moeda equivalem a R$ 1. A alteração manual fica salva neste navegador. Ao atualizar pela internet, os valores serão substituídos pela cotação online.</p>
+    <div class="rate-grid">
+     <label>ARS por R$ 1<input class="field" id="rateARS" type="number" min="0.000001" step="any" inputmode="decimal"></label>
+     <label>USD por R$ 1<input class="field" id="rateUSD" type="number" min="0.000001" step="any" inputmode="decimal"></label>
+     <label>UYU por R$ 1<input class="field" id="rateUYU" type="number" min="0.000001" step="any" inputmode="decimal"></label>
+    </div>
+    <small>Taxas online de referência, sem spread, IOF ou tarifas. Podem diferir da Wise, Nomad e casas de câmbio. Valores iniciais ilustrativos: ARS 276, USD 0,18622 e UYU 8 por real.</small>
+   </details>
+  </div>
+ </section>
+
+ <section id="orcamento" class="budget-section">
+  <details class="budget-details">
+   <summary><span>▦ Planejamento financeiro</span><small>Ver estimativa total e divisão de gastos</small></summary>
+   <div class="budget-inner">
+    <div class="budget">
+     <div>
+      <h3>Viajar com leveza</h3>
+      <div class="big">R$ 3.800–4.100</div>
+      <p>Estimativa para o casal, sem hotel e passagens aéreas.</p>
+      <small>Valores indicativos. Conferir tarifas, cardápios e ingressos antes de pagar.</small>
+     </div>
+     <div>
+      <div class="row"><span>Alimentação</span><b>R$ 1.600</b></div>
+      <div class="row"><span>Transporte local + Uber</span><b>R$ 400</b></div>
+      <div class="row"><span>Ferry Colonia + almoço</span><b>R$ 800</b></div>
+      <div class="row"><span>Barco em Tigre</span><b>R$ 200</b></div>
+      <div class="row"><span>Bares e festas</span><b>R$ 500</b></div>
+      <div class="row"><span>Compras / reserva</span><b>R$ 400</b></div>
+      <small>Total de referência: R$ 3.900.</small>
+     </div>
+    </div>
+   </div>
+  </details>
+ </section>
+
+ <section>
+  <div class="section-head">
+   <div><div class="eyebrow" style="color:var(--gold)">Detalhes importantes</div><h2>Antes de sair</h2></div>
+  </div>
+  <div class="note">
+   <b>Reservas e horários:</b> tour Plaza de Mayo em 09/11 às 11h e tour San Telmo em 12/11 às 11h informados como reservados. Confirmar pontos de encontro. Conferir Colonia Express, barco Tigre, restaurantes e festas. Para o voo de 14/11 às 18h, confirmar se o aeroporto é AEP ou EZE.
+  </div>
+ </section>
+</main>
+
+<footer class="footer">
+ <div class="heart">♥</div>
+ <div class="serif" style="font-size:23px;color:var(--wine)">Que seja inesquecível.</div>
+ <p>Buenos Aires · Colonia · 2026</p>
+ <p>Feito para guardar histórias, descobrir sabores e escolher o próximo passeio juntos.</p>
+</footer>
+
+<nav class="bottom-nav" aria-label="Atalhos">
+ <button data-nav="inicio"><span>♡</span>Início</button>
+ <button data-nav="all"><span>◫</span>Roteiro</button>
+ <button data-nav="options"><span>✧</span>Opções</button>
+ <button data-nav="favorites"><span>♥</span>Favoritos</button>
+</nav>
+<div id="toast" class="toast" role="status"></div>
+
+<script>
+"use strict";
+
+/* ROTEIRO
+Cada linha usa:
+dia | região | categoria | nome | endereço | preço | descrição | look | status | horário
+Status O = oficial; P = opcional.
+Preços são referências, não cotações verificadas.
+*/
+
+const RAW = `
+07|Centro|Transporte|Aeroparque → Broadway Hotel|Aeroparque Jorge Newbery, Buenos Aires|Uber R$ 45–75 casal|Chegada prevista às 21h. Ir de Uber ao hotel e deixar as malas.|Look viagem · confortável|O|21h
+07|Centro|Atração|Broadway Hotel & Suites|Av. Corrientes 1173, Buenos Aires|Hospedagem não incluída|Nossa base no coração de Buenos Aires. Check-in previsto para 22h30–23h.|Look viagem · casual|O|22h30
+07|Centro|Gastronomia|Revire Brasas Bravas|Av. Corrientes 1124, Buenos Aires|R$ 180–300 casal|Primeiro jantar com parrilla e provoleta. Confirmar horário limite da cozinha.|Smart casual · noite especial|O|23h
+07|Centro|Atração|Obelisco|Av. 9 de Julio e Av. Corrientes, Buenos Aires|Gratuito|Foto noturna clássica se ainda houver energia depois do jantar.|Casual chic · fotos|O|Após jantar
+07|Centro|Gastronomia|Chiquilín|Sarmiento 1599, Buenos Aires|R$ 220–350 casal|Plano B para jantar de chegada. Confirmar cozinha aberta.|Smart casual|P|Noite
+07|Centro|Gastronomia|Pizzería Güerrín|Av. Corrientes 1368, Buenos Aires|R$ 65–127 casal|Plano C econômico: pizza argentina e fugazzeta perto do hotel.|Casual urbano|P|Noite
+08|San Telmo|Atração|Feria de San Telmo / Plaza Dorrego|Plaza Dorrego, Humberto 1º e Defensa, Buenos Aires|Gratuito|Feira de domingo, antiguidades, artesanato e ruas históricas.|Linho leve · tênis confortável|O|09h30
+08|San Telmo|Atração|Estátua da Mafalda|Defensa 700, esquina Chile, Buenos Aires|Gratuito|Parada para foto durante a caminhada por San Telmo.|Casual fotogênico|O|11h
+08|San Telmo|Gastronomia|Mercado de San Telmo|Bolívar 970, Buenos Aires|R$ 70–150 casal|Mercado gastronômico histórico, ótimo para almoço e petiscos.|Casual urbano|O|12h
+08|San Telmo|Gastronomia|El Hornero|Mercado de San Telmo, Bolívar 970, Buenos Aires|2 empanadas ~ARS 9.600|Empanadas para provar no mercado. Preço de referência sujeito a alteração.|Casual de passeio|O|12h30
+08|La Boca|Atração|Caminito|Caminito, La Boca, Buenos Aires|Gratuito|Casas coloridas, arte e fotografias. Visitar durante o dia.|Cores neutras + acessório marcante|O|14h
+08|La Boca|Atração|La Bombonera — exterior|Brandsen 805, La Boca, Buenos Aires|Gratuito por fora|Fachada do estádio do Boca Juniors. Ingresso somente se decidirem entrar.|Streetwear · tênis|O|15h
+08|La Boca|Gastronomia|Pizzería Banchero|Av. Almirante Brown 1200, La Boca, Buenos Aires|R$ 70–140 casal|Fugazzeta tradicional antes de voltar ao Centro.|Casual de passeio|O|15h30
+08|La Boca|Gastronomia|La Glorieta de Quique|La Boca, Buenos Aires — localização a confirmar|Choripán ~ARS 16.000|Alternativa gastronômica. Conferir endereço antes de ir.|Streetwear|P|
+08|San Telmo|Gastronomia|MERCI|Carlos Calvo 455, San Telmo, Buenos Aires|Consumo variável|Espaço gastronômico para café e lanche.|Casual criativo|P|
+08|San Telmo|Gastronomia|Hierro Parrilla — Mercado|Bolívar 970, Mercado de San Telmo, Buenos Aires|Conferir cardápio|Parrilla como alternativa dentro do mercado.|Casual urbano|P|
+08|San Telmo|Gastronomia|La Choripanería|Mercado de San Telmo, Bolívar 970, Buenos Aires|Conferir cardápio|Choripán e lanche rápido no mercado.|Casual urbano|P|
+08|San Telmo|Gastronomia|Nuestra Parrilla|San Telmo, Buenos Aires — endereço a confirmar|Conferir cardápio|Parrilla informal. Confirmar localização antes de ir.|Casual urbano|P|
+08|La Boca|Cultura|Colón Fábrica|Av. Pedro de Mendoza 2163, La Boca, Buenos Aires|Ingresso a confirmar|Cenários e figurinos do Teatro Colón. Plano B em dia de chuva.|Casual elegante|P|
+08|San Telmo|Cultura|Museo de Arte Moderno|Av. San Juan 350, Buenos Aires|Ingresso a confirmar|Museu coberto e alternativa cultural para chuva.|Minimalista urbano|P|
+08|San Telmo|Cultura|El Zanjón de Granados|Defensa 755, Buenos Aires|Ingresso pago · confirmar|Casarão histórico e estruturas subterrâneas em visita guiada.|Casual elegante|P|
+09|Centro|Cultura|Free tour Plaza de Mayo|Plaza de Mayo, Buenos Aires — ponto da reserva|Gratuito / gorjeta opcional|Tour guiado reservado para as 11h. Verificar ponto de encontro no voucher.|Linho + tênis confortável|O|11h
+09|Centro|Atração|Catedral Metropolitana|San Martín 27, Buenos Aires|Gratuito|Arquitetura e história na Plaza de Mayo.|Casual elegante|O|12h30
+09|Centro|Atração|Casa Rosada — exterior|Balcarce 50, Buenos Aires|Gratuito por fora|Fotografias da fachada e arredores da praça.|Casual urbano|O|13h
+09|Centro|Atração|Avenida de Mayo e Calle Florida|Av. de Mayo / Calle Florida, Buenos Aires|Gratuito|Passeio arquitetônico e comércio do Microcentro.|Casual urbano|O|14h
+09|Centro|Atração|Galerías Pacífico|Florida 737, Buenos Aires|Entrada gratuita|Galeria histórica e lojas. Alternativa coberta se chover.|Smart casual|O|15h
+09|Centro|Cultura|Palacio Libertad|Sarmiento 151, Buenos Aires|Consultar programação|Centro cultural para visitar se estiver aberto e houver tempo.|Casual elegante|O|16h
+09|Puerto Madero|Atração|Puente de la Mujer|Dique 3, Puerto Madero, Buenos Aires|Gratuito|Passeio ao entardecer pela orla revitalizada.|Casual chic · fotos|O|17h
+09|Centro|Gastronomia|Santos Manjares|Paraguay 938, Buenos Aires|R$ 160–280 casal|Parrilla argentina para jantar. Conferir cardápio.|Smart casual · jantar|O|20h
+09|Centro|Gastronomia|Café Saint Moritz|Esmeralda 890, Buenos Aires|R$ 40–90 casal|Café tradicional e pausa no Centro.|Casual elegante|P|
+09|Centro|Cultura|Manzana de las Luces|Perú 222, Buenos Aires|Visitas a confirmar|Conjunto histórico próximo da Plaza de Mayo.|Casual elegante|P|
+09|Centro|Cultura|Teatro Colón — visita guiada|Cerrito 628, Buenos Aires|R$ 100–200 por pessoa|Visita guiada ao interior do teatro. Conferir tarifas e horários.|Elegante discreto|P|
+09|Centro|Gastronomia|Parrilla Peña|Rodríguez Peña 682, Buenos Aires|Conferir cardápio|Alternativa tradicional de parrilla no Centro.|Smart casual|P|
+10|Puerto Madero|Transporte|Colonia Express — terminal BA|Av. Elvira Rawson de Dellepiane 155, Buenos Aires|Pacote referência ~R$ 800 casal|Ferry de ida e volta. Day Tour Clásico com almoço sem bebidas. Confirmar bilhetes, horários e documentos.|Look viagem · documentos à mão|O|Saída cedo
+10|Colonia|Atração|Portón de Campo|Portón de Campo, Colonia del Sacramento, Uruguay|Gratuito|Portão histórico de entrada da cidade colonial.|Linho leve · tênis|O|Manhã
+10|Colonia|Atração|Calle de los Suspiros|Calle de los Suspiros, Colonia del Sacramento, Uruguay|Gratuito|Rua de pedra emblemática, perfeita para fotografias.|Romântico casual|O|Manhã
+10|Colonia|Atração|Plaza Mayor|Plaza Mayor, Colonia del Sacramento, Uruguay|Gratuito|Centro do bairro histórico para explorar.|Casual elegante|O|Meio-dia
+10|Colonia|Atração|Faro de Colonia|Faro de Colonia del Sacramento, Uruguay|Área externa gratuita; subida a confirmar|Farol histórico e vista para o Rio da Prata.|Casual confortável|O|Tarde
+10|Colonia|Atração|Rambla de las Américas|Rambla de las Américas, Colonia del Sacramento, Uruguay|Gratuito|Caminhada na orla antes de voltar ao ferry.|Casual leve|O|Tarde
+11|Retiro|Transporte|Estación Retiro Mitre|Av. Dr. José María Ramos Mejía 1430, Buenos Aires|Trem econômico · confirmar tarifa|Tomar Línea Mitre, ramal Retiro–Tigre.|Look passeio · tênis|O|08h
+11|Tigre|Transporte|Estación Tigre|Estación Tigre, Tigre, Buenos Aires|Incluído no trem|Desembarque para caminhar à estação fluvial.|Casual confortável|O|09h
+11|Tigre|Atração|Passeio de barco pelo Delta|Estación Fluvial Domingo Faustino Sarmiento, Tigre|R$ 100–200 casal|Passeio de aproximadamente uma hora. Conferir preços e saídas.|Casual leve · proteção solar|O|10h
+11|Tigre|Gastronomia|Puerto de Frutos|Sarmiento 160, Tigre, Buenos Aires|Almoço R$ 90–160 casal|Mercado, artesanato e almoço à beira do Delta.|Casual confortável|O|11h30
+11|Palermo|Atração|Palermo Soho / Plaza Serrano|Plaza Inmigrantes de Armenia, Palermo, Buenos Aires|Gratuito|Cafés, lojas, grafites e ruas para caminhar após Tigre.|Urbano chic · tênis|O|16h
+11|Palermo|Gastronomia|Maru Botana — Palermo|El Salvador 5900, Palermo, Buenos Aires|Medialuna ~ARS 3.000; café ~ARS 4–6 mil|Café da tarde. Preços de referência sujeitos a alteração.|Casual charmoso|O|Tarde
+11|Palermo|Gastronomia|Hierro Bodegón|Fitz Roy 1722, Palermo, Buenos Aires|R$ 130–230 casal|Milanesa, risoto e comida de bodegón.|Smart casual|P|
+11|Tigre|Cultura|Museo de Arte Tigre|Paseo Victorica 972, Tigre, Buenos Aires|Ingresso a confirmar|Museu histórico à beira do rio.|Casual elegante|P|
+11|Palermo|Gastronomia|Lucciano’s — Palermo|Palermo, Buenos Aires — escolher unidade|R$ 25–35 por sorvete|Sorvetes e sobremesas para uma pausa.|Casual urbano|P|
+11|Palermo|Gastronomia|Parrilla Sanabria|Palermo, Buenos Aires — endereço a confirmar|Conferir cardápio|Alternativa de parrilla. Verificar localização.|Smart casual|P|
+11|Palermo|Gastronomia|Celia Parrilla Argentina|Palermo, Buenos Aires — endereço a confirmar|Conferir cardápio|Outra alternativa de parrilla.|Smart casual|P|
+12|San Telmo|Cultura|Free tour San Telmo|San Telmo, Buenos Aires — ponto da reserva|Gratuito / gorjeta opcional|Tour reservado para as 11h. Conferir ponto de encontro.|Casual confortável|O|11h
+12|San Telmo|Gastronomia|Almoço no Mercado de San Telmo|Bolívar 970, Buenos Aires|R$ 80–150 casal|Escolher entre empanadas, choripán e parrilla.|Casual urbano|O|13h
+12|Recoleta|Atração|Floralis Genérica|Plaza de las Naciones Unidas, Buenos Aires|Gratuito|Escultura metálica icônica e fotos na Recoleta.|Romântico urbano|O|14h30
+12|Recoleta|Cultura|Museo Nacional de Bellas Artes|Av. del Libertador 1473, Buenos Aires|Coleção permanente gratuita|Museu de arte com visita ajustável conforme disposição.|Casual elegante|O|15h30
+12|Recoleta|Atração|El Ateneo Grand Splendid|Av. Santa Fe 1860, Buenos Aires|Gratuito|Livraria em antigo teatro. Uma das paradas mais fotogênicas.|Smart casual · fotos|O|17h
+12|Recoleta|Cultura|Centro Cultural Recoleta|Junín 1930, Buenos Aires|Programação a confirmar|Exposições e espaço coberto para chuva.|Casual criativo|P|
+12|Recoleta|Cultura|Biblioteca Nacional|Agüero 2502, Buenos Aires|Acesso a confirmar|Arquitetura brutalista e atividades culturais.|Minimalista urbano|P|
+12|Palermo|Atração|Barrio Parque / Palermo Chico|Plaza Alemania, Palermo Chico, Buenos Aires|Gratuito|Ruas arborizadas e mansões.|Casual elegante|P|
+12|Almagro|Festa|Feliza|Av. Córdoba 3271, Buenos Aires|Consumo variável|Bar e espaço queer para drinks.|Noite urbana · criativo|P|Noite
+13|Belgrano|Atração|Barrio Chino|Arribeños 2100, Belgrano, Buenos Aires|Entrada grátis; consumo R$ 50–120 casal|Arco chinês, mercados, doces e lojas asiáticas.|Streetwear chic · tênis|O|09h30
+13|Palermo|Atração|Jardín Japonés|Av. Casares 3450, Palermo, Buenos Aires|ARS 48.000 casal ~R$ 174 referência|Pontes, carpas, bonsais e jardins. Confirmar ingresso atualizado.|Linho claro · look romântico|O|12h15
+13|Palermo|Atração|El Rosedal|Av. Infanta Isabel, Parque Tres de Febrero, Buenos Aires|Gratuito|Jardins, lago e descanso antes da noite.|Casual fotogênico|O|14h
+13|Palermo|Atração|Plaza Serrano — cafés e lojas|Plaza Inmigrantes de Armenia, Palermo Soho, Buenos Aires|Consumo variável|Café, compras, grafites e jantar em Palermo Soho.|Casual chic|O|16h
+13|Palermo|Festa|Peuteo — pré-festa|Gurruchaga 1867, Palermo, Buenos Aires|Drinks e consumo variável|Bar gay para começar a noite. Verificar abertura.|Noite pop · fashion|P|22h
+13|Colegiales|Festa|Fiesta Plop!|Teatro Vorterix, Av. Federico Lacroze 3455 — local habitual|Ingresso a confirmar|Festa LGBTQ+ pop. Edição de 13/11 não confirmada.|Pop statement · noite|P|Após 23h
+13|Palermo|Festa|RHEO|Complejo Crobar, Av. Cnel. Marcelino E. Freyre — local habitual|Ingresso a confirmar|Circuit gay e eletrônica. Confirmar edição e endereço.|Clubwear · preto|P|Madrugada
+13|Palermo|Festa|HUMAN!|Local variável; edições anteriores no Crobar, Palermo|Ingresso a confirmar|Festa eletrônica LGBTQ+ itinerante. Sem edição confirmada.|Clubwear · fashion|P|Madrugada
+13|Almagro|Festa|Amerika|Gascón 1040, Buenos Aires|Ingresso e consumo a confirmar|Boate gay com múltiplas pistas. Conferir programação.|Balada urbana|P|Noite
+13|Palermo|Festa|Club 69|Niceto Club, Cnel. Niceto Vega 5510, Buenos Aires|Ingresso a confirmar|Festa queer com performances. Conferir edição de sexta.|Fashion ousado|P|Noite
+13|Almagro|Festa|Glam Disco|José A. Cabrera 3046, Buenos Aires|Ingresso a confirmar|Boate gay tradicional, alternativa para dançar.|Clubwear · elegante|P|Noite
+13|Palermo|Festa|Random Fiesta — Niceto Club|Cnel. Niceto Vega 5510, Buenos Aires|ARS 20.000 por pessoa referência|Evento de referência para 13/11 às 23h59. Confirmar ingressos.|Noite disco · urbano|P|23h59
+13|Palermo|Festa|FOMO House Party — The Lift|Godoy Cruz 1967, Palermo, Buenos Aires|ARS 15.000 por pessoa referência|House e eletrônica. Confirmar evento e ingressos.|Clubwear · minimal|P|23h59
+13|Almagro|Festa|Feliza — bar queer|Av. Córdoba 3271, Buenos Aires|Consumo variável|Alternativa tranquila para drinks e encontro.|Casual noturno|P|Noite
+13|Caballito|Atração|Barrio Inglés de Caballito|Pedro Goyena e Emilio Mitre, Caballito, Buenos Aires|Gratuito|Casas de inspiração inglesa. Passeio extra.|Casual vintage|P|
+13|Villa Crespo|Gastronomia|Bodegón Los Hermanos|Juan Ramírez de Velasco 1059, Buenos Aires|Conferir cardápio|Bodegón tradicional, requer deslocamento.|Smart casual|P|
+14|Centro|Gastronomia|Café da manhã de despedida|Próximo ao Broadway Hotel, Av. Corrientes 1173|R$ 40–90 casal|Café sem pressa perto do hotel.|Casual leve|O|09h
+14|Centro|Atração|Calle Florida e Galerías Pacífico|Florida 737, Buenos Aires|Gratuito; compras à parte|Últimas compras de alfajores, chocolates e lembranças.|Casual chic · confortável|O|10h
+14|Centro|Gastronomia|Almoço no Centro|Próximo ao hotel, Av. Corrientes 1173|R$ 80–160 casal|Almoço prático antes de retirar as malas.|Casual viagem|O|12h30
+14|Centro|Transporte|Check-out e Uber ao aeroporto|Broadway Hotel & Suites, Av. Corrientes 1173|Uber AEP R$ 45–75; EZE pode ser maior|Voo às 18h. Confirmar aeroporto e antecedência.|Look viagem · confortável|O|13h30–14h30
+14|Retiro|Gastronomia|Maru Botana — Retiro|Suipacha 1371, Buenos Aires|Consumo variável|Café alternativo se houver tempo.|Casual charmoso|P|
+todos|Centro|Gastronomia|La Planchita — Microcentro|Microcentro, Buenos Aires — endereço a confirmar|Conferir cardápio|Alternativa gastronômica do catálogo.|Casual urbano|P|
+todos|Centro|Gastronomia|La Piedad — sándwich de miga|Buenos Aires — endereço a confirmar|Conferir cardápio|Provar sanduíche de miga. Confirmar unidade.|Casual de café|P|
+todos|Palermo|Atração|Bosques de Palermo|Parque Tres de Febrero, Palermo, Buenos Aires|Gratuito|Parques e caminhos verdes para relaxar ou fotografar.|Casual esportivo|P|
+todos|Centro|Cultura|Teatro Colón — fachada|Cerrito 628, Buenos Aires|Gratuito por fora|Foto externa caso não façam a visita guiada.|Casual elegante|P|
+`;
+
+const D=RAW.trim().split('\n').map((line,i)=>{
+ const [day,region,category,name,address,price,description,look,status,time]=line.split('|');
+ return {
+  id:'p'+i,day,region,category,name,address,price,description,look,
+  status:status==='O'?'official':'option',time:time||''
+ };
+});
+
+const DAYS=[
+ ['07','Sáb 07'],['08','Dom 08'],['09','Seg 09'],['10','Ter 10'],
+ ['11','Qua 11'],['12','Qui 12'],['13','Sex 13'],['14','Sáb 14']
+];
+const DAY_TITLES={
+ '07':'Chegada & primeiras luzes',
+ '08':'San Telmo & La Boca',
+ '09':'Centro histórico & Puerto Madero',
+ '10':'Colonia del Sacramento · Uruguai',
+ '11':'Delta do Tigre & Palermo',
+ '12':'San Telmo & Recoleta',
+ '13':'Bairros temáticos & noite de festa',
+ '14':'Despedida & voo às 18h'
+};
+
+const state={day:'all',mode:'all',region:'all',category:'all',search:''};
+const $=id=>document.getElementById(id);
+const readJSON=(key,fallback)=>{
+ try{
+  const v=JSON.parse(localStorage.getItem(key));
+  return v??fallback;
+ }catch(e){return fallback}
+};
+const fav=new Set(readJSON('honeymoon_favs',[]));
+const visited=new Set(readJSON('honeymoon_visited',[]));
+
+function persist(){
+ try{
+  localStorage.setItem('honeymoon_favs',JSON.stringify([...fav]));
+  localStorage.setItem('honeymoon_visited',JSON.stringify([...visited]));
+ }catch(e){}
+}
+function esc(v){
+ return String(v??'').replace(/[&<>"']/g,c=>({
+  '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
+ })[c]);
+}
+function mapsURL(p){
+ const q=p.address.includes('confirmar')?
+  p.name+', Buenos Aires, Argentina':p.address;
+ return 'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(q);
+}
+function imagesURL(p){
+ return 'https://www.google.com/search?tbm=isch&q='+
+  encodeURIComponent(p.name+' '+(p.region==='Colonia'?'Uruguay':'Buenos Aires')+' lugar');
+}
+function dayLabel(d){
+ return DAYS.find(x=>x[0]===d)?.[1]||'Flexível';
+}
+function categoryIcon(c){
+ return {'Gastronomia':'🍷','Atração':'✦','Cultura':'🏛','Transporte':'🚆','Festa':'♫'}[c]||'✦';
+}
+function toast(t){
+ const el=$('toast');
+ el.textContent=t;
+ el.classList.add('show');
+ clearTimeout(window._toast);
+ window._toast=setTimeout(()=>el.classList.remove('show'),2300);
+}
+function go(id){
+ $(id).scrollIntoView({behavior:'smooth',block:'start'});
+}
+function setMode(mode){
+ state.mode=mode;
+ state.day='all';
+ render();
+ go('guia');
+}
+function setDay(day){
+ state.day=day;
+ state.mode='all';
+ render();
+}
+function filtered(){
+ return D.filter(p=>
+  (state.day==='all'||p.day===state.day||p.day==='todos')&&
+  (state.mode==='all'||
+   (state.mode==='options'&&p.status==='option')||
+   (state.mode==='official'&&p.status==='official')||
+   (state.mode==='favorites'&&fav.has(p.id))||
+   (state.mode==='visited'&&visited.has(p.id)))&&
+  (state.region==='all'||p.region===state.region)&&
+  (state.category==='all'||p.category===state.category)&&
+  (!state.search||[
+   p.name,p.description,p.address,p.region,p.look
+  ].join(' ').toLocaleLowerCase('pt-BR').includes(
+   state.search.toLocaleLowerCase('pt-BR')
+  ))
+ );
+}
+
+/* Sugestões de fotografias, sem imagens externas obrigatórias.
+O link abre referências reais do lugar em uma nova aba. */
+function photoTip(p){
+ const n=p.name.toLowerCase();
+ if(n.includes('caminito'))return 'Foto de mãos dadas entre as fachadas coloridas. Uma pessoa caminha à frente e olha para trás.';
+ if(n.includes('suspiros'))return 'Retrato de costas caminhando juntos pela rua de pedras, aproveitando a perspectiva colonial.';
+ if(n.includes('obelisco'))return 'Foto noturna em plano aberto, com o Obelisco iluminado ao fundo.';
+ if(n.includes('floralis'))return 'Foto simétrica de vocês dois com a escultura ao fundo, de preferência em plano aberto.';
+ if(n.includes('ateneo'))return 'Retrato discreto nas galerias superiores, mostrando o antigo teatro ao fundo.';
+ if(n.includes('japonés'))return 'Foto na ponte com vegetação em primeiro plano e vocês em destaque.';
+ if(n.includes('rosedal'))return 'Retrato espontâneo caminhando entre flores e caminhos do jardim.';
+ if(n.includes('puente de la mujer'))return 'Silhueta do casal ao entardecer, usando a ponte como linha de composição.';
+ if(n.includes('plaza de mayo')||n.includes('casa rosada'))return 'Foto com a arquitetura histórica ao fundo, usando enquadramento amplo.';
+ if(n.includes('mafalda'))return 'Foto divertida com a escultura, respeitando a fila e o espaço dos visitantes.';
+ if(n.includes('barrio chino'))return 'Foto sob o arco de entrada, valorizando a perspectiva da rua.';
+ if(n.includes('palermo'))return 'Foto espontânea em uma fachada charmosa, com café na mão ou caminhando juntos.';
+ if(n.includes('faro'))return 'Retrato junto ao farol, incluindo a paisagem colonial na composição.';
+ if(n.includes('tigre')||n.includes('delta'))return 'Foto do casal à beira do rio ou no barco, aproveitando a luz natural.';
+ if(p.category==='Gastronomia')return 'Foto de mesa com os pratos, seguida de um retrato espontâneo dos dois brindando.';
+ if(p.category==='Festa')return 'Retrato do look antes de sair e foto espontânea do casal, respeitando as regras do local.';
+ if(p.category==='Transporte')return 'Registro de viagem com malas, bilhetes ou paisagem, sem expor documentos pessoais.';
+ return 'Foto espontânea do casal caminhando ou admirando o lugar, com a paisagem em segundo plano.';
+}
+
+function card(p){
+ return `
+ <article class="card ${p.category==='Gastronomia'?'food':''} ${p.category==='Festa'?'party':''}">
+  <div class="card-top">
+   <div class="card-kicker">
+    <span class="pill ${p.status}">${p.status==='official'?'✓ Roteiro oficial':'✧ Opcional'}</span>
+    <span class="pill">${categoryIcon(p.category)} ${esc(p.category)}</span>
+   </div>
+   <h3>${esc(p.name)}</h3>
+   <p class="address">⌖ ${esc(p.address)}</p>
+   <p class="description">${esc(p.description)}</p>
+  </div>
+  <div class="card-bottom">
+   <div class="meta">
+    <div class="meta-row"><span class="symbol">◷</span><span>${esc(dayLabel(p.day))}${p.time?' · '+esc(p.time):''} · ${esc(p.region)}</span></div>
+    <div class="meta-row"><span class="symbol">◇</span><span><b>${esc(p.price)}</b></span></div>
+   </div>
+   <div class="look"><b>✧ Sugestão de look</b><span>${esc(p.look)}</span></div>
+   <details class="photo-details">
+    <summary>📷 Inspiração para fotografar</summary>
+    <div class="photo-content">
+     <div class="photo-preview">♡ &nbsp; Nossa próxima memória</div>
+     <p>${esc(photoTip(p))}</p>
+     <a href="${esc(imagesURL(p))}" target="_blank" rel="noopener noreferrer">Ver fotos reais do lugar ↗</a>
+    </div>
+   </details>
+   <div class="actions">
+    <a class="btn" target="_blank" rel="noopener noreferrer" href="${esc(mapsURL(p))}">⌖ Maps</a>
+    <button class="btn" data-action="copy" data-id="${p.id}">⧉ Nota</button>
+    <button class="btn iconbtn ${fav.has(p.id)?'selected':''}" data-action="fav" data-id="${p.id}" aria-label="Alternar favorito">${fav.has(p.id)?'♥':'♡'}</button>
+   </div>
+   <button class="btn" data-action="visit" data-id="${p.id}" style="margin-top:8px;width:100%;font-size:11px">
+    ${visited.has(p.id)?'✓ Visitado · desfazer':'○ Marcar como visitado'}
+   </button>
+  </div>
+ </article>`;
+}
+
+function render(){
+ $('dayTabs').innerHTML=[
+  ['all','Todos os dias'],...DAYS
+ ].map(([d,label])=>
+  `<button class="chip ${state.day===d&&state.mode==='all'?'active':''}" data-day="${d}">${label}</button>`
+ ).join('')+[
+  ['official','Roteiro oficial'],
+  ['options','✧ Opcionais'],
+  ['favorites','♥ Favoritos'],
+  ['visited','✓ Visitados']
+ ].map(([m,label])=>
+  `<button class="chip ${state.mode===m?'active':''}" data-mode="${m}">${label}</button>`
+ ).join('');
+
+ const list=filtered();
+ $('resultInfo').textContent=
+  `${list.length} lugares encontrados · ${fav.size} favoritos · ${visited.size} visitados`;
+ $('totalCount').textContent=`${D.length} locais catalogados`;
+
+ if(!list.length){
+  $('results').innerHTML='<div class="empty">Nenhum lugar encontrado. Tente limpar os filtros ♡</div>';
+  return;
+ }
+ if(state.day==='all'&&state.mode==='all'&&state.region==='all'&&state.category==='all'&&!state.search){
+  $('results').innerHTML=DAYS.map(([d,label])=>{
+   const items=list.filter(p=>p.day===d);
+   return `<section class="day-block">
+    <div class="day-title">
+     <span class="day-num">${d}</span>
+     <div><h3>${DAY_TITLES[d]}</h3><small>${label} de novembro · ${items.length} lugares</small></div>
+    </div>
+    <div class="cards">${items.map(card).join('')}</div>
+   </section>`;
+  }).join('')+
+  `<section class="day-block">
+   <div class="day-title"><span class="day-num">✦</span><div><h3>Extras para qualquer dia</h3><small>Sem compromisso no roteiro</small></div></div>
+   <div class="cards">${list.filter(p=>p.day==='todos').map(card).join('')}</div>
+  </section>`;
+ }else{
+  $('results').innerHTML=`<div class="cards">${list.map(card).join('')}</div>`;
+ }
+}
+
+[...new Set(D.map(p=>p.region))]
+ .sort((a,b)=>a.localeCompare(b,'pt-BR'))
+ .forEach(r=>{
+  const op=document.createElement('option');
+  op.value=r;op.textContent=r;$('region').append(op);
+ });
+
+$('dayTabs').addEventListener('click',e=>{
+ const el=e.target.closest('button');
+ if(!el)return;
+ if(el.dataset.day!==undefined)setDay(el.dataset.day);
+ else if(el.dataset.mode)setMode(el.dataset.mode);
+});
+
+$('results').addEventListener('click',async e=>{
+ const b=e.target.closest('button[data-action]');
+ if(!b)return;
+ const p=D.find(x=>x.id===b.dataset.id);
+ if(!p)return;
+ const action=b.dataset.action;
+ if(action==='fav'){
+  fav.has(p.id)?fav.delete(p.id):fav.add(p.id);
+  persist();render();toast('Favoritos atualizados ♡');
+ }
+ if(action==='visit'){
+  visited.has(p.id)?visited.delete(p.id):visited.add(p.id);
+  persist();render();toast('Roteiro atualizado ✓');
+ }
+ if(action==='copy'){
+  const t=[
+   p.name,`Dia: ${dayLabel(p.day)} ${p.time}`,
+   `Endereço: ${p.address}`,`Categoria: ${p.category}`,
+   `Preço: ${p.price}`,`Descrição: ${p.description}`,
+   `Look: ${p.look}`,`Foto: ${photoTip(p)}`,
+   `Google Maps: ${mapsURL(p)}`
+  ].join('\n');
+  try{
+   await navigator.clipboard.writeText(t);
+   toast('Nota copiada!');
+  }catch(err){
+   const area=document.createElement('textarea');
+   area.value=t;document.body.append(area);area.select();
+   const ok=document.execCommand('copy');
+   area.remove();
+   toast(ok?'Nota copiada!':'Não foi possível copiar');
+  }
+ }
+});
+
+$('search').addEventListener('input',e=>{state.search=e.target.value;render()});
+$('region').addEventListener('change',e=>{state.region=e.target.value;render()});
+$('category').addEventListener('change',e=>{state.category=e.target.value;render()});
+$('resetBtn').addEventListener('click',()=>{
+ Object.assign(state,{day:'all',mode:'all',region:'all',category:'all',search:''});
+ $('region').value='all';
+ $('category').value='all';
+ $('search').value='';
+ render();
+});
+document.querySelectorAll('[data-nav]').forEach(b=>{
+ b.addEventListener('click',()=>{
+  const mode=b.dataset.nav;
+  if(mode==='inicio')go('inicio');
+  else setMode(mode);
+ });
+});
+render();
+
+/* Conversor com tentativa de atualização online.
+Fonte: open.er-api.com. Fallback para taxas salvas ou ilustrativas. */
 (function(){
- const defaults={ARS:276,USD:1/5.37,UYU:8};
- let saved={};try{saved=JSON.parse(localStorage.getItem('honeymoon_fx_rates')||'{}')}catch(e){}
- const rates={BRL:1,...defaults,...saved};
- const byId=id=>document.getElementById(id);
- const currency={BRL:'pt-BR',ARS:'es-AR',USD:'en-US',UYU:'es-UY'};
- function convert(){const amount=Number(byId('fxAmount').value);const from=byId('fxFrom').value,to=byId('fxTo').value;const value=amount/rates[from]*rates[to];byId('fxResult').textContent=Number.isFinite(value)?new Intl.NumberFormat(currency[to],{style:'currency',currency:to,maximumFractionDigits:2}).format(value):'—';byId('fxInfo').textContent='Estimativa com taxas informadas manualmente · sem impostos e tarifas';}
- for(const code of ['ARS','USD','UYU']){const el=byId('rate'+code);el.value=Number(rates[code].toFixed(6));el.addEventListener('input',()=>{const val=Number(el.value);if(val>0&&Number.isFinite(val)){rates[code]=val;try{localStorage.setItem('honeymoon_fx_rates',JSON.stringify({ARS:rates.ARS,USD:rates.USD,UYU:rates.UYU}))}catch(e){}convert()}})}
- ['fxAmount','fxFrom','fxTo'].forEach(id=>byId(id).addEventListener('input',convert));byId('fxSwap').addEventListener('click',()=>{const a=byId('fxFrom'),b=byId('fxTo');[a.value,b.value]=[b.value,a.value];convert()});convert();
+ const defaults={BRL:1,ARS:276,USD:1/5.37,UYU:8};
+ const saved=readJSON('honeymoon_fx_v3',null);
+ const validSaved=saved&&saved.rates&&
+  ['ARS','USD','UYU'].every(k=>Number(saved.rates[k])>0);
+ let rates={...defaults,...(validSaved?saved.rates:{})};
+ let source=validSaved?(saved.source||'salva'):'ilustrativa';
+ let updated=validSaved?(saved.updated||''):'';
+ const locales={BRL:'pt-BR',ARS:'es-AR',USD:'en-US',UYU:'es-UY'};
+
+ function save(){
+  try{
+   localStorage.setItem('honeymoon_fx_v3',JSON.stringify({rates,source,updated}));
+  }catch(e){}
+ }
+ function syncInputs(){
+  for(const c of ['ARS','USD','UYU']){
+   $('rate'+c).value=Number(rates[c].toFixed(6));
+  }
+ }
+ function convert(){
+  const amount=Number($('fxAmount').value);
+  const from=$('fxFrom').value,to=$('fxTo').value;
+  const value=amount/rates[from]*rates[to];
+  $('fxResult').textContent=Number.isFinite(value)?
+   new Intl.NumberFormat(locales[to],{
+    style:'currency',currency:to,maximumFractionDigits:2
+   }).format(value):'—';
+  const label=source==='online'?'Cotação online de referência':
+   source==='manual'?'Cotação ajustada manualmente':
+   source==='salva'?'Última cotação salva':'Cotação ilustrativa';
+  $('fxInfo').textContent=label+' · não inclui spread, IOF ou tarifas';
+ }
+ function setStatus(t){$('fxStatus').textContent=t}
+ function dateText(s){
+  if(!s)return '';
+  const d=new Date(s);
+  return Number.isNaN(d.getTime())?'':d.toLocaleString('pt-BR');
+ }
+ async function refresh(){
+  const b=$('fxRefresh');
+  b.disabled=true;
+  b.textContent='Atualizando...';
+  setStatus('Consultando cotações online...');
+  try{
+   const controller=new AbortController();
+   const timeout=setTimeout(()=>controller.abort(),9000);
+   let res;
+   try{
+    res=await fetch('https://open.er-api.com/v6/latest/BRL',{
+     signal:controller.signal,cache:'no-store'
+    });
+   }finally{clearTimeout(timeout)}
+   if(!res.ok)throw Error('Falha HTTP '+res.status);
+   const data=await res.json();
+   if(data.result!=='success')throw Error('Resposta inválida');
+   const next={BRL:1};
+   for(const c of ['ARS','USD','UYU']){
+    const v=Number(data.rates?.[c]);
+    if(!Number.isFinite(v)||v<=0)throw Error('Cotação inválida');
+    next[c]=v;
+   }
+   rates=next;
+   source='online';
+   updated=data.time_last_update_utc||new Date().toISOString();
+   save();syncInputs();convert();
+   setStatus('✓ Cotação de referência atualizada'+
+    (dateText(updated)?' · '+dateText(updated):''));
+  }catch(e){
+   convert();
+   setStatus('Sem atualização online. Usando valores '+(
+    source==='online'||source==='salva'?'salvos':
+    source==='manual'?'manuais':'ilustrativos'
+   )+'. Tente novamente quando estiver conectado.');
+  }finally{
+   b.disabled=false;
+   b.textContent='↻ Atualizar cotação';
+  }
+ }
+ for(const c of ['ARS','USD','UYU']){
+  $('rate'+c).addEventListener('input',()=>{
+   const val=Number($('rate'+c).value);
+   if(val>0&&Number.isFinite(val)){
+    rates[c]=val;
+    source='manual';
+    updated=new Date().toISOString();
+    save();convert();
+    setStatus('Cotação manual salva neste navegador.');
+   }
+  });
+ }
+ ['fxAmount','fxFrom','fxTo'].forEach(id=>
+  $(id).addEventListener('input',convert)
+ );
+ $('fxSwap').addEventListener('click',()=>{
+  const a=$('fxFrom'),b=$('fxTo');
+  const old=a.value;a.value=b.value;b.value=old;
+  convert();
+ });
+ $('fxRefresh').addEventListener('click',refresh);
+ syncInputs();convert();
+ if(validSaved){
+  setStatus('Últimos valores salvos'+
+   (dateText(updated)?' · '+dateText(updated):''));
+ }
+ refresh();
 })();
 </script>
-</body></html>
+</body>
+</html>
